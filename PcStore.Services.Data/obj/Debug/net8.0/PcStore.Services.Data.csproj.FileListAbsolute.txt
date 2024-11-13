@@ -1,0 +1,11 @@
+C:\Users\s1231\source\repos\PcStore\PcStore.Services.Data\bin\Debug\net8.0\PcStore.Services.Data.deps.json
+C:\Users\s1231\source\repos\PcStore\PcStore.Services.Data\bin\Debug\net8.0\PcStore.Services.Data.dll
+C:\Users\s1231\source\repos\PcStore\PcStore.Services.Data\bin\Debug\net8.0\PcStore.Services.Data.pdb
+C:\Users\s1231\source\repos\PcStore\PcStore.Services.Data\obj\Debug\net8.0\PcStore.Services.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\s1231\source\repos\PcStore\PcStore.Services.Data\obj\Debug\net8.0\PcStore.Services.Data.AssemblyInfoInputs.cache
+C:\Users\s1231\source\repos\PcStore\PcStore.Services.Data\obj\Debug\net8.0\PcStore.Services.Data.AssemblyInfo.cs
+C:\Users\s1231\source\repos\PcStore\PcStore.Services.Data\obj\Debug\net8.0\PcStore.Services.Data.csproj.CoreCompileInputs.cache
+C:\Users\s1231\source\repos\PcStore\PcStore.Services.Data\obj\Debug\net8.0\PcStore.Services.Data.dll
+C:\Users\s1231\source\repos\PcStore\PcStore.Services.Data\obj\Debug\net8.0\refint\PcStore.Services.Data.dll
+C:\Users\s1231\source\repos\PcStore\PcStore.Services.Data\obj\Debug\net8.0\PcStore.Services.Data.pdb
+C:\Users\s1231\source\repos\PcStore\PcStore.Services.Data\obj\Debug\net8.0\ref\PcStore.Services.Data.dll

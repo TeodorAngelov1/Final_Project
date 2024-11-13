@@ -1,0 +1,9 @@
+C:\Users\s1231\source\repos\PcStore\PcStore\obj\Debug\net8.0\PcStore.csproj.AssemblyReference.cache
+C:\Users\s1231\source\repos\PcStore\PcStore\obj\Debug\net8.0\PcStore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\s1231\source\repos\PcStore\PcStore\obj\Debug\net8.0\PcStore.AssemblyInfoInputs.cache
+C:\Users\s1231\source\repos\PcStore\PcStore\obj\Debug\net8.0\PcStore.AssemblyInfo.cs
+C:\Users\s1231\source\repos\PcStore\PcStore\obj\Debug\net8.0\PcStore.csproj.CoreCompileInputs.cache
+C:\Users\s1231\source\repos\PcStore\PcStore\obj\Debug\net8.0\PcStore.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\s1231\source\repos\PcStore\PcStore\obj\Debug\net8.0\PcStore.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\s1231\source\repos\PcStore\PcStore\obj\Debug\net8.0\PcStore.RazorAssemblyInfo.cache
+C:\Users\s1231\source\repos\PcStore\PcStore\obj\Debug\net8.0\PcStore.RazorAssemblyInfo.cs
