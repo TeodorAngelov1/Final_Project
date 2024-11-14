@@ -15,3 +15,5 @@ C:\Users\s1231\source\repos\PcStore\PcStore.Data\obj\Debug\net8.0\ref\PcStore.Da
 C:\Users\s1231\source\repos\PcStore\PcStore.Data\bin\Debug\net8.0\PcStore.Data.Models.dll
 C:\Users\s1231\source\repos\PcStore\PcStore.Data\bin\Debug\net8.0\PcStore.Data.Models.pdb
 C:\Users\s1231\source\repos\PcStore\PcStore.Data\obj\Debug\net8.0\PcStore..594F83FE.Up2Date
+C:\Users\s1231\source\repos\PcStore\PcStore.Data\bin\Debug\net8.0\PcStore.Common.dll
+C:\Users\s1231\source\repos\PcStore\PcStore.Data\bin\Debug\net8.0\PcStore.Common.pdb

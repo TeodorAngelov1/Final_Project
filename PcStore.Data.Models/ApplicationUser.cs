@@ -10,10 +10,9 @@
             this.Id = Guid.NewGuid();
         }
 
-        //public virtual ICollection<ApplicationUserMovie> ApplicationUserMovies { get; set; }
-        //    = new HashSet<ApplicationUserMovie>();
+        public virtual ICollection<ProductClient> ProductsClients { get; set; }
+            = new HashSet<ProductClient>();
 
-        //public virtual ICollection<Ticket> Tickets { get; set; }
-        //    = new HashSet<Ticket>();
+      
     }
 }

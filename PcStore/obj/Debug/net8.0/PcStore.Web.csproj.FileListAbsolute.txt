@@ -294,10 +294,12 @@ C:\Users\s1231\source\repos\PcStore\PcStore\bin\Debug\net8.0\PcStore.Data.dll
 C:\Users\s1231\source\repos\PcStore\PcStore\bin\Debug\net8.0\PcStore.Web.ViewModels.dll
 C:\Users\s1231\source\repos\PcStore\PcStore\bin\Debug\net8.0\PcStore.Data.pdb
 C:\Users\s1231\source\repos\PcStore\PcStore\bin\Debug\net8.0\PcStore.Web.ViewModels.pdb
-C:\Users\s1231\source\repos\PcStore\PcStore\bin\Debug\net8.0\AutoMapper.dll
 C:\Users\s1231\source\repos\PcStore\PcStore\bin\Debug\net8.0\PcStore.Data.Models.dll
+C:\Users\s1231\source\repos\PcStore\PcStore\bin\Debug\net8.0\PcStore.Data.Models.pdb
+C:\Users\s1231\source\repos\PcStore\PcStore\bin\Debug\net8.0\PcStore.Common.dll
+C:\Users\s1231\source\repos\PcStore\PcStore\bin\Debug\net8.0\PcStore.Common.pdb
+C:\Users\s1231\source\repos\PcStore\PcStore\bin\Debug\net8.0\AutoMapper.dll
 C:\Users\s1231\source\repos\PcStore\PcStore\bin\Debug\net8.0\PcStore.Services.Mapping.dll
 C:\Users\s1231\source\repos\PcStore\PcStore\bin\Debug\net8.0\PcStore.Web.Infrastructure.dll
 C:\Users\s1231\source\repos\PcStore\PcStore\bin\Debug\net8.0\PcStore.Services.Mapping.pdb
 C:\Users\s1231\source\repos\PcStore\PcStore\bin\Debug\net8.0\PcStore.Web.Infrastructure.pdb
-C:\Users\s1231\source\repos\PcStore\PcStore\bin\Debug\net8.0\PcStore.Data.Models.pdb

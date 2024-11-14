@@ -2058,10 +2058,19 @@
           }
         }
       },
+      "PcStore.Common/1.0.0": {
+        "runtime": {
+          "PcStore.Common.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "PcStore.Data/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.10",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.10",
+          "PcStore.Common": "1.0.0",
           "PcStore.Data.Models": "1.0.0"
         },
         "runtime": {
@@ -3265,6 +3274,11 @@
       "sha512": "sha512-bR4qdCmssMMbo9Fatci49An5B1UaVJZHKNq70PRgzoLYIlitb8Tj7ns/Xt5Pz1CkERiTjcVBDU2y1AVrPBYkaw==",
       "path": "system.windows.extensions/7.0.0",
       "hashPath": "system.windows.extensions.7.0.0.nupkg.sha512"
+    },
+    "PcStore.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "PcStore.Data/1.0.0": {
       "type": "project",

@@ -17,6 +17,14 @@ namespace PcStore.Data
         {
         }
 
+        public virtual DbSet<Product> Products { get; set; } = null!;
+        public virtual DbSet<Category> Categories { get; set; } = null!;
+        public virtual DbSet<ProductClient> ProductClients { get; set; } = null!;
+        public virtual DbSet<Part> Parts { get; set; } = null!;
+        public virtual DbSet<Laptop> Laptops { get; set; } = null!;
+
+
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

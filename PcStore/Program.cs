@@ -3,15 +3,17 @@ using Microsoft.EntityFrameworkCore;
 using PcStore.Data;
 using PcStore.Data.Models;
 using PcStore.Models;
-using Services.Mapping;
-namespace PcStore
+using PcStore.Services.Mapping;
+using PcStore.Web.Infrastructure.Extensions;
+
+namespace Shop
 {
     public class Program
     {
         public static void Main(string[] args)
         {
             WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
-            string connectionString = builder.Configuration.GetConnectionString("SQLServer")!;
+            string connectionString = builder.Configuration.GetConnectionString("DefaultConnection")!;
 
             // Add services to the container.
             builder.Services
@@ -26,9 +28,8 @@ namespace PcStore
                     ConfigureIdentity(builder, cfg);
                 })
                 .AddEntityFrameworkStores<ApplicationDbContext>()
-                .AddRoles<IdentityRole<Guid>>()
-                .AddSignInManager<SignInManager<ApplicationUser>>()
-                .AddUserManager<UserManager<ApplicationUser>>();
+                .AddDefaultUI()
+                .AddDefaultTokenProviders();
 
             builder.Services.ConfigureApplicationCookie(cfg =>
             {
@@ -36,9 +37,9 @@ namespace PcStore
             });
 
             builder.Services.RegisterRepositories(typeof(ApplicationUser).Assembly);
-            builder.Services.RegisterUserDefinedServices(typeof(IMovieService).Assembly);
+            //builder.Services.RegisterUserDefinedServices(typeof(IMovieService).Assembly);
 
-            builder.Services.AddScoped<ICinemaService, CinemaService>();
+           // builder.Services.AddScoped<ICinemaService, CinemaService>();
 
             builder.Services.AddControllersWithViews();
             builder.Services.AddRazorPages();

@@ -1578,6 +1578,16 @@
           }
         }
       },
+      "PcStore.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/PcStore.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PcStore.Common.dll": {}
+        }
+      },
       "PcStore.Data.Models/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -4215,6 +4225,11 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "PcStore.Common/1.0.0": {
+      "type": "project",
+      "path": "../PcStore.Common/PcStore.Common.csproj",
+      "msbuildProject": "../PcStore.Common/PcStore.Common.csproj"
+    },
     "PcStore.Data.Models/1.0.0": {
       "type": "project",
       "path": "../PcStore.Data.Models/PcStore.Data.Models.csproj",
@@ -4226,6 +4241,7 @@
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 8.0.10",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.10",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.10",
+      "PcStore.Common >= 1.0.0",
       "PcStore.Data.Models >= 1.0.0"
     ]
   },
@@ -4260,6 +4276,9 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
+            "C:\\Users\\s1231\\source\\repos\\PcStore\\PcStore.Common\\PcStore.Common.csproj": {
+              "projectPath": "C:\\Users\\s1231\\source\\repos\\PcStore\\PcStore.Common\\PcStore.Common.csproj"
+            },
             "C:\\Users\\s1231\\source\\repos\\PcStore\\PcStore.Data.Models\\PcStore.Data.Models.csproj": {
               "projectPath": "C:\\Users\\s1231\\source\\repos\\PcStore\\PcStore.Data.Models\\PcStore.Data.Models.csproj"
             }

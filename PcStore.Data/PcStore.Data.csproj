@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Configuration\" />
     <Folder Include="Migrations\" />
     <Folder Include="Repository\" />
   </ItemGroup>
@@ -22,6 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\PcStore.Common\PcStore.Common.csproj" />
     <ProjectReference Include="..\PcStore.Data.Models\PcStore.Data.Models.csproj" />
   </ItemGroup>
 
