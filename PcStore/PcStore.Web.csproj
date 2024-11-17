@@ -26,4 +26,8 @@
     <ProjectReference Include="..\PcStore.Web.ViewModels\PcStore.Web.ViewModels.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\image\" />
+  </ItemGroup>
+
 </Project>

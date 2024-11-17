@@ -17,14 +17,52 @@
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
+                <div class="collapse navbar-collapse" id="navbarColor02">
+                    <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            @if (User?.Identity?.IsAuthenticated ?? false)
+                            {
+                                <a class="nav-link active" asp-controller="Product" asp-action="Index">
+                                    Home
+                                    <span class="visually-hidden">(current)</span>
+                                </a>
+                                 
+                            }
+                            else
+                            {
+                                <a class="nav-link active" asp-controller="Home" asp-action="Index">
+                                    Home
+                                    <span class="visually-hidden">(current)</span>
+                                </a>
+                            }
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
+                        @if (User?.Identity?.IsAuthenticated ?? false)
+                        {
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Products</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" asp-controller="Product" asp-action="Index">Laptops</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" asp-controller="Product" asp-action="Add">Parts</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Product" asp-action="Cart">Cart</a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Products</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" asp-controller="Product" asp-action="Index">Laptops</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" asp-controller="Product" asp-action="Add">Parts</a>
+                                </div>
+                            </li>
+                        }
+
+                       
                     </ul>
                     <partial name="_LoginPartial" />
                 </div>
