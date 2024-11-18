@@ -3268,6 +3268,11 @@
       "PcStore.Web.ViewModels/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "PcStore.Common": "1.0.0",
+          "PcStore.Data.Models": "1.0.0",
+          "PcStore.Services.Mapping": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/PcStore.Web.ViewModels.dll": {}
         },

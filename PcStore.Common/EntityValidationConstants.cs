@@ -33,7 +33,7 @@
             public const int NameMaxLength = 50;
             public const int DescriptionMinLength = 50;
             public const int DescriptionMaxLength = 500;
-            public const int PriceMinLength = 1;
+            public const int PriceMinValue = 1;
             public const int PriceMaxValue = 300000;
         }
     }

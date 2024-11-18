@@ -398,7 +398,17 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\s1231\\source\\repos\\PcStore\\PcStore.Common\\PcStore.Common.csproj": {
+                "projectPath": "C:\\Users\\s1231\\source\\repos\\PcStore\\PcStore.Common\\PcStore.Common.csproj"
+              },
+              "C:\\Users\\s1231\\source\\repos\\PcStore\\PcStore.Data.Models\\PcStore.Data.Models.csproj": {
+                "projectPath": "C:\\Users\\s1231\\source\\repos\\PcStore\\PcStore.Data.Models\\PcStore.Data.Models.csproj"
+              },
+              "C:\\Users\\s1231\\source\\repos\\PcStore\\PcStore.Services.Mapping\\PcStore.Services.Mapping.csproj": {
+                "projectPath": "C:\\Users\\s1231\\source\\repos\\PcStore\\PcStore.Services.Mapping\\PcStore.Services.Mapping.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
