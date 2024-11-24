@@ -4252,11 +4252,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\s1231\\source\\repos\\PcStore\\PcStore.Data\\PcStore.Data.csproj",
+      "projectUniqueName": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Data\\PcStore.Data.csproj",
       "projectName": "PcStore.Data",
-      "projectPath": "C:\\Users\\s1231\\source\\repos\\PcStore\\PcStore.Data\\PcStore.Data.csproj",
+      "projectPath": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Data\\PcStore.Data.csproj",
       "packagesPath": "C:\\Users\\s1231\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\s1231\\source\\repos\\PcStore\\PcStore.Data\\obj\\",
+      "outputPath": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -4276,11 +4276,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\s1231\\source\\repos\\PcStore\\PcStore.Common\\PcStore.Common.csproj": {
-              "projectPath": "C:\\Users\\s1231\\source\\repos\\PcStore\\PcStore.Common\\PcStore.Common.csproj"
+            "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Common\\PcStore.Common.csproj": {
+              "projectPath": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Common\\PcStore.Common.csproj"
             },
-            "C:\\Users\\s1231\\source\\repos\\PcStore\\PcStore.Data.Models\\PcStore.Data.Models.csproj": {
-              "projectPath": "C:\\Users\\s1231\\source\\repos\\PcStore\\PcStore.Data.Models\\PcStore.Data.Models.csproj"
+            "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Data.Models\\PcStore.Data.Models.csproj": {
+              "projectPath": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Data.Models\\PcStore.Data.Models.csproj"
             }
           }
         }

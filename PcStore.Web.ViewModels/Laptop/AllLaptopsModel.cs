@@ -1,13 +1,12 @@
-﻿using PcStore.Services.Mapping;
+﻿
 
 
 namespace PcStore.Web.ViewModels.Laptop
 {
-    using AutoMapper;
+   
 
     using Data.Models;
-    using Services.Mapping;
-    public class AllLaptopsModel : IMapFrom<Laptop>, IHaveCustomMappings
+    public class AllLaptopsModel 
     {
         public string Id { get; set; } = null!;
 
@@ -19,11 +18,6 @@ namespace PcStore.Web.ViewModels.Laptop
 
         public string? LaptopImageUrl { get; set; }
 
-        public void CreateMappings(IProfileExpression configuration)
-        {
-            configuration.CreateMap<Laptop, LaptopDetailsModel>()
-               .ForMember(x => x.LaptopImageUrl,
-                   x => x.MapFrom(s => s.LaptopImageUrl));
-        }
+        
     }
 }

@@ -21,12 +21,15 @@
 
   <ItemGroup>
     <ProjectReference Include="..\PcStore.Data\PcStore.Data.csproj" />
-    <ProjectReference Include="..\PcStore.Services.Mapping\PcStore.Services.Mapping.csproj" />
+    <ProjectReference Include="..\PcStore.Services.Data\PcStore.Services.Data.csproj" />
     <ProjectReference Include="..\PcStore.Web.Infrastructure\PcStore.Web.Infrastructure.csproj" />
     <ProjectReference Include="..\PcStore.Web.ViewModels\PcStore.Web.ViewModels.csproj" />
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Views\Accessory\" />
+    <Folder Include="Views\MyCart\" />
+    <Folder Include="Views\Part\" />
     <Folder Include="wwwroot\image\" />
   </ItemGroup>
 

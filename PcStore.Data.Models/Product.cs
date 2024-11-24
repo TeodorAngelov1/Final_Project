@@ -16,6 +16,8 @@ namespace PcStore.Data.Models
 
         public Category Category { get; set; } = null!;
 
+        public bool IsDeleted { get; set; }
+
         public IEnumerable<ProductClient> ProductsClients { get; set; } = new List<ProductClient>();
 
         public IEnumerable<ProductLaptop> ProductsLaptops { get; set; } = new List<ProductLaptop>();

@@ -821,11 +821,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\s1231\\source\\repos\\PcStore\\PcStore.Data.Models\\PcStore.Data.Models.csproj",
+      "projectUniqueName": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Data.Models\\PcStore.Data.Models.csproj",
       "projectName": "PcStore.Data.Models",
-      "projectPath": "C:\\Users\\s1231\\source\\repos\\PcStore\\PcStore.Data.Models\\PcStore.Data.Models.csproj",
+      "projectPath": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Data.Models\\PcStore.Data.Models.csproj",
       "packagesPath": "C:\\Users\\s1231\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\s1231\\source\\repos\\PcStore\\PcStore.Data.Models\\obj\\",
+      "outputPath": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Data.Models\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

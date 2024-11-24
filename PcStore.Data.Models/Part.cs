@@ -14,6 +14,8 @@ namespace PcStore.Data.Models
         public decimal PartPrice { get; set; }
 
         public string? PartImageUrl { get; set; }
+
+        public bool IsDeleted { get; set; }
         public IEnumerable<ProductPart> PartsProducts { get; set; } = new List<ProductPart>();
     }
 }

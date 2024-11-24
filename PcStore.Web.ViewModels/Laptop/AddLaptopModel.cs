@@ -1,12 +1,10 @@
 ﻿namespace PcStore.Web.ViewModels.Laptop
 {
-    using AutoMapper;
-    using PcStore.Services.Mapping;
     using PcStore.Data.Models;
     using static Common.EntityValidationConstants.Laptop;
     using System.ComponentModel.DataAnnotations;
 
-    public class AddLaptopModel : IMapTo<Laptop>, IHaveCustomMappings
+    public class AddLaptopModel 
     {
         [Required]
         [MaxLength(NameMaxLength)]
@@ -23,10 +21,6 @@
         public decimal LaptopPrice { get; set; }
 
         public string? LaptopImageUrl { get; set; }
-        public void CreateMappings(IProfileExpression configuration)
-        {
-            configuration.CreateMap<AddLaptopModel, Laptop>()
-                .ForMember(d => d.LaptopImageUrl, x => x.Ignore());
-        }
+        
     }
 }

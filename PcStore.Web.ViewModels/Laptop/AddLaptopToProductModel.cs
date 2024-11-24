@@ -12,5 +12,8 @@
         [MaxLength(NameMaxLength)]
         [MinLength(NameMinLength)]
         public string LaptopName { get; set; } = null!;
+
+        public IList<Product> Products { get; set; }
+            = new List<Product>();
     }
 }

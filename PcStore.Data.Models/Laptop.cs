@@ -18,6 +18,8 @@ namespace PcStore.Data.Models
 
         public string? LaptopImageUrl { get; set; }
 
+        public bool IsDeleted { get; set; }
+
         public IEnumerable<ProductLaptop> LaptopsProducts { get; set; } = new List<ProductLaptop>();
 
     }

@@ -2,11 +2,10 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using PcStore.Data;
 using PcStore.Data.Models;
-using PcStore.Models;
-using PcStore.Services.Mapping;
-using PcStore.Web.Infrastructure.Extensions;
+using PcStore.Services.Data;
+using PcStore.Services.Data.Interfaces;
 
-namespace Shop
+namespace PcStore
 {
     public class Program
     {
@@ -36,17 +35,14 @@ namespace Shop
                 cfg.LoginPath = "/Identity/Account/Login";
             });
 
-            builder.Services.RegisterRepositories(typeof(ApplicationUser).Assembly);
-            //builder.Services.RegisterUserDefinedServices(typeof(IMovieService).Assembly);
-
-           // builder.Services.AddScoped<ICinemaService, CinemaService>();
+           builder.Services.AddScoped<ILaptopService, LaptopService>();
 
             builder.Services.AddControllersWithViews();
             builder.Services.AddRazorPages();
 
             WebApplication app = builder.Build();
 
-            AutoMapperConfig.RegisterMappings(typeof(ErrorViewModel).Assembly);
+           
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
@@ -61,16 +57,15 @@ namespace Shop
 
             app.UseRouting();
 
-            // Authorization can work only if we know who uses the application -> We need Authentication
-            app.UseAuthentication(); // First -> Who am I?
-            app.UseAuthorization(); // Second -> What can I do?
+            app.UseAuthentication(); 
+            app.UseAuthorization(); 
 
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
-            app.MapRazorPages(); // Add routing to Identity Razor Pages
+            app.MapRazorPages(); 
 
-            app.ApplyMigrations();
+           
 
             app.Run();
         }

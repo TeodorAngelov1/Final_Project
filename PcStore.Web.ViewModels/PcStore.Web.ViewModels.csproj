@@ -6,4 +6,15 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="MyCart\" />
+    <Folder Include="Product\" />
+    <Folder Include="Part\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PcStore.Common\PcStore.Common.csproj" />
+    <ProjectReference Include="..\PcStore.Data.Models\PcStore.Data.Models.csproj" />
+  </ItemGroup>
+
 </Project>

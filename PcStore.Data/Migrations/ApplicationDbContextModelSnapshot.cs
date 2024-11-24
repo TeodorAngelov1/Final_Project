@@ -237,12 +237,12 @@ namespace PcStore.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("dfdc45c3-8780-40a1-bc07-5c052978ea13"),
+                            Id = new Guid("9a7bcea2-9a16-49c8-952d-822aaf3222d1"),
                             Name = "Parts"
                         },
                         new
                         {
-                            Id = new Guid("0ab3a3d9-223b-4937-bea6-8f55b329ad5d"),
+                            Id = new Guid("6ff67d72-8981-4e94-a03a-f11e5a97390a"),
                             Name = "Laptops"
                         });
                 });
@@ -252,6 +252,9 @@ namespace PcStore.Data.Migrations
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
 
                     b.Property<string>("LaptopDescription")
                         .IsRequired()
@@ -277,21 +280,24 @@ namespace PcStore.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("9515938e-98b0-4d68-a4a6-39c5b7a27757"),
+                            Id = new Guid("30ec6900-a448-4140-8afe-2a712f6f7d40"),
+                            IsDeleted = false,
                             LaptopDescription = "Nice Laptop",
                             LaptopName = "HP",
                             LaptopPrice = 1200m
                         },
                         new
                         {
-                            Id = new Guid("90118911-6e1f-49fe-917f-c9499714c265"),
+                            Id = new Guid("8531f773-d151-4965-a752-a78ae807a785"),
+                            IsDeleted = false,
                             LaptopDescription = "Buy now",
                             LaptopName = "Dell",
                             LaptopPrice = 1800m
                         },
                         new
                         {
-                            Id = new Guid("0cd0687c-84f1-4005-9b35-126aaa98cdbc"),
+                            Id = new Guid("30810620-8633-4a82-aa44-289b772a0a36"),
+                            IsDeleted = false,
                             LaptopDescription = "Best Laptop",
                             LaptopName = "Lenovo",
                             LaptopPrice = 3000m
@@ -303,6 +309,9 @@ namespace PcStore.Data.Migrations
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
 
                     b.Property<string>("PartBrand")
                         .IsRequired()
@@ -328,21 +337,24 @@ namespace PcStore.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("058b8819-b432-41f0-a1a0-57f16dfec794"),
+                            Id = new Guid("1357eec8-febd-44e4-9e96-7f1778f7ea1e"),
+                            IsDeleted = false,
                             PartBrand = "Samsung",
                             PartDescription = "RAM Memory",
                             PartPrice = 200m
                         },
                         new
                         {
-                            Id = new Guid("989a0641-1e82-47e7-9b0d-56c2fc259e0d"),
+                            Id = new Guid("164de626-a9ed-48c1-949d-9563684632c9"),
+                            IsDeleted = false,
                             PartBrand = "Kingston",
                             PartDescription = "SSD",
                             PartPrice = 800m
                         },
                         new
                         {
-                            Id = new Guid("dbbce7c0-7ac6-4e0d-8861-b2595b1430d0"),
+                            Id = new Guid("0ea4273e-82e8-4163-949b-47084d76991e"),
+                            IsDeleted = false,
                             PartBrand = "Seagete",
                             PartDescription = "HDD",
                             PartPrice = 100m
@@ -357,6 +369,9 @@ namespace PcStore.Data.Migrations
 
                     b.Property<Guid>("CategoryId")
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
 
                     b.Property<string>("ProductName")
                         .IsRequired()

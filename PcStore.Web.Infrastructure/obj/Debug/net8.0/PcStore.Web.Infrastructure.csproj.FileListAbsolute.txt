@@ -17,3 +17,22 @@ C:\Users\s1231\source\repos\PcStore\PcStore.Web.Infrastructure\bin\Debug\net8.0\
 C:\Users\s1231\source\repos\PcStore\PcStore.Web.Infrastructure\obj\Debug\net8.0\PcStore..E08EDAC0.Up2Date
 C:\Users\s1231\source\repos\PcStore\PcStore.Web.Infrastructure\bin\Debug\net8.0\PcStore.Common.dll
 C:\Users\s1231\source\repos\PcStore\PcStore.Web.Infrastructure\bin\Debug\net8.0\PcStore.Common.pdb
+C:\Users\s1231\Desktop\New folder\PcStore.Web.Infrastructure\obj\Debug\net8.0\PcStore.Web.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\s1231\Desktop\New folder\PcStore.Web.Infrastructure\obj\Debug\net8.0\PcStore.Web.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\s1231\Desktop\New folder\PcStore.Web.Infrastructure\obj\Debug\net8.0\PcStore.Web.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\s1231\Desktop\New folder\PcStore.Web.Infrastructure\obj\Debug\net8.0\PcStore.Web.Infrastructure.AssemblyInfo.cs
+C:\Users\s1231\Desktop\New folder\PcStore.Web.Infrastructure\obj\Debug\net8.0\PcStore.Web.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\s1231\Desktop\New folder\PcStore.Web.Infrastructure\obj\Debug\net8.0\PcStore.Web.Infrastructure.dll
+C:\Users\s1231\Desktop\New folder\PcStore.Web.Infrastructure\obj\Debug\net8.0\refint\PcStore.Web.Infrastructure.dll
+C:\Users\s1231\Desktop\New folder\PcStore.Web.Infrastructure\obj\Debug\net8.0\PcStore.Web.Infrastructure.pdb
+C:\Users\s1231\Desktop\New folder\PcStore.Web.Infrastructure\bin\Debug\net8.0\PcStore.Web.Infrastructure.deps.json
+C:\Users\s1231\Desktop\New folder\PcStore.Web.Infrastructure\bin\Debug\net8.0\PcStore.Web.Infrastructure.dll
+C:\Users\s1231\Desktop\New folder\PcStore.Web.Infrastructure\bin\Debug\net8.0\PcStore.Web.Infrastructure.pdb
+C:\Users\s1231\Desktop\New folder\PcStore.Web.Infrastructure\bin\Debug\net8.0\PcStore.Common.dll
+C:\Users\s1231\Desktop\New folder\PcStore.Web.Infrastructure\bin\Debug\net8.0\PcStore.Data.dll
+C:\Users\s1231\Desktop\New folder\PcStore.Web.Infrastructure\bin\Debug\net8.0\PcStore.Data.Models.dll
+C:\Users\s1231\Desktop\New folder\PcStore.Web.Infrastructure\bin\Debug\net8.0\PcStore.Data.pdb
+C:\Users\s1231\Desktop\New folder\PcStore.Web.Infrastructure\bin\Debug\net8.0\PcStore.Common.pdb
+C:\Users\s1231\Desktop\New folder\PcStore.Web.Infrastructure\bin\Debug\net8.0\PcStore.Data.Models.pdb
+C:\Users\s1231\Desktop\New folder\PcStore.Web.Infrastructure\obj\Debug\net8.0\PcStore..E08EDAC0.Up2Date
+C:\Users\s1231\Desktop\New folder\PcStore.Web.Infrastructure\obj\Debug\net8.0\ref\PcStore.Web.Infrastructure.dll
