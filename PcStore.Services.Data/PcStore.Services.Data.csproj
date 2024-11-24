@@ -6,4 +6,14 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PcStore.Common\PcStore.Common.csproj" />
+    <ProjectReference Include="..\PcStore.Data\PcStore.Data.csproj" />
+    <ProjectReference Include="..\PcStore.Web.ViewModels\PcStore.Web.ViewModels.csproj" />
+  </ItemGroup>
+
 </Project>
