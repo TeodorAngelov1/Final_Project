@@ -10,17 +10,17 @@ namespace PcStore.Data.Models
     {
         public Guid Id { get; set; } = Guid.NewGuid();
 
-        public string LaptopName { get; set; } = null!;
+        public string Brand { get; set; } = null!;
 
-        public string LaptopDescription { get; set; } = null!;
+        public string Description { get; set; } = null!;
 
-        public decimal LaptopPrice { get; set; }
+        public decimal Price { get; set; }
 
-        public string? LaptopImageUrl { get; set; }
+        public string? ImageUrl { get; set; }
 
         public bool IsDeleted { get; set; }
 
-        public IEnumerable<ProductLaptop> LaptopsProducts { get; set; } = new List<ProductLaptop>();
+        public IEnumerable<LaptopClient> LaptopsClients { get; set; } = new List<LaptopClient>();
 
     }
 }

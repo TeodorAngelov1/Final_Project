@@ -9,27 +9,27 @@
 
     <form method="post" enctype="multipart/form-data">
         <div class="mb-3">
-            <label asp-for="LaptopName" class="form-label">Name</label>
-            <input asp-for="LaptopName" class="form-control" />
-            <span asp-validation-for="LaptopName" class="text-danger"></span>
+            <label asp-for="Brand" class="form-label">Brand</label>
+            <input asp-for="Brand" class="form-control" />
+            <span asp-validation-for="Brand" class="text-danger"></span>
         </div>
 
         <div class="mb-3">
-            <label asp-for="LaptopImageUrl" class="form-label">Image URL</label>
-            <input asp-for="LaptopImageUrl" class="form-control" />
-            <span asp-validation-for="LaptopImageUrl" class="text-danger"></span>
+            <label asp-for="ImageUrl" class="form-label">Image URL</label>
+            <input asp-for="ImageUrl" class="form-control" />
+            <span asp-validation-for="ImageUrl" class="text-danger"></span>
         </div>
 
         <div class="mb-3">
-            <label asp-for="LaptopDescription" class="form-label">Description</label>
-            <textarea asp-for="LaptopDescription" class="form-control"></textarea>
-            <span asp-validation-for="LaptopDescription" class="text-danger"></span>
+            <label asp-for="Description" class="form-label">Description</label>
+            <textarea asp-for="Description" class="form-control"></textarea>
+            <span asp-validation-for="Description" class="text-danger"></span>
         </div>
 
         <div class="mb-3">
-            <label asp-for="LaptopPrice" class="form-label">Price</label>
-            <input asp-for="LaptopPrice" type="number" step="0.01" class="form-control" />
-            <span asp-validation-for="LaptopPrice" class="text-danger"></span>
+            <label asp-for="Price" class="form-label">Price</label>
+            <input asp-for="Price" type="number" step="0.01" class="form-control" />
+            <span asp-validation-for="Price" class="text-danger"></span>
         </div>
 
         <button type="submit" class="btn btn-primary">Update</button>

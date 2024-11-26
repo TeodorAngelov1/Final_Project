@@ -219,57 +219,29 @@ namespace PcStore.Data.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
-            modelBuilder.Entity("PcStore.Data.Models.Category", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Categories");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("9a7bcea2-9a16-49c8-952d-822aaf3222d1"),
-                            Name = "Parts"
-                        },
-                        new
-                        {
-                            Id = new Guid("6ff67d72-8981-4e94-a03a-f11e5a97390a"),
-                            Name = "Laptops"
-                        });
-                });
-
             modelBuilder.Entity("PcStore.Data.Models.Laptop", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("LaptopDescription")
-                        .IsRequired()
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
-
-                    b.Property<string>("LaptopImageUrl")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("LaptopName")
+                    b.Property<string>("Brand")
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<decimal>("LaptopPrice")
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("ImageUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<decimal>("Price")
                         .HasMaxLength(300000)
                         .HasColumnType("decimal(18,2)");
 
@@ -280,28 +252,43 @@ namespace PcStore.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("30ec6900-a448-4140-8afe-2a712f6f7d40"),
+                            Id = new Guid("bbc4fcb6-2b8c-4893-a499-716bcded6af7"),
+                            Brand = "HP",
+                            Description = "Nice Laptop",
                             IsDeleted = false,
-                            LaptopDescription = "Nice Laptop",
-                            LaptopName = "HP",
-                            LaptopPrice = 1200m
+                            Price = 1200m
                         },
                         new
                         {
-                            Id = new Guid("8531f773-d151-4965-a752-a78ae807a785"),
+                            Id = new Guid("47ff1e7f-9c7c-47f4-a336-2d7142107c57"),
+                            Brand = "Dell",
+                            Description = "Buy now",
                             IsDeleted = false,
-                            LaptopDescription = "Buy now",
-                            LaptopName = "Dell",
-                            LaptopPrice = 1800m
+                            Price = 1800m
                         },
                         new
                         {
-                            Id = new Guid("30810620-8633-4a82-aa44-289b772a0a36"),
+                            Id = new Guid("59f06802-ff1a-469b-ba9e-ffbeae64d94f"),
+                            Brand = "Lenovo",
+                            Description = "Best Laptop",
                             IsDeleted = false,
-                            LaptopDescription = "Best Laptop",
-                            LaptopName = "Lenovo",
-                            LaptopPrice = 3000m
+                            Price = 3000m
                         });
+                });
+
+            modelBuilder.Entity("PcStore.Data.Models.LaptopClient", b =>
+                {
+                    b.Property<Guid>("LaptopId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("ClientId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("LaptopId", "ClientId");
+
+                    b.HasIndex("ClientId");
+
+                    b.ToTable("LaptopsClients");
                 });
 
             modelBuilder.Entity("PcStore.Data.Models.Part", b =>
@@ -310,23 +297,23 @@ namespace PcStore.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("PartBrand")
+                    b.Property<string>("Brand")
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<string>("PartDescription")
+                    b.Property<string>("Description")
                         .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
-                    b.Property<string>("PartImageUrl")
+                    b.Property<string>("ImageUrl")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<decimal>("PartPrice")
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<decimal>("Price")
                         .HasMaxLength(10000)
                         .HasColumnType("decimal(18,2)");
 
@@ -337,117 +324,43 @@ namespace PcStore.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("1357eec8-febd-44e4-9e96-7f1778f7ea1e"),
+                            Id = new Guid("e0d1f9a5-5fea-458e-b09c-a88ea78a5e37"),
+                            Brand = "Samsung",
+                            Description = "RAM Memory",
                             IsDeleted = false,
-                            PartBrand = "Samsung",
-                            PartDescription = "RAM Memory",
-                            PartPrice = 200m
+                            Price = 200m
                         },
                         new
                         {
-                            Id = new Guid("164de626-a9ed-48c1-949d-9563684632c9"),
+                            Id = new Guid("1d1f27de-ae35-4e37-bdc9-812086174e55"),
+                            Brand = "Kingston",
+                            Description = "SSD",
                             IsDeleted = false,
-                            PartBrand = "Kingston",
-                            PartDescription = "SSD",
-                            PartPrice = 800m
+                            Price = 800m
                         },
                         new
                         {
-                            Id = new Guid("0ea4273e-82e8-4163-949b-47084d76991e"),
+                            Id = new Guid("a48f32d6-5906-4c2e-bba1-f2998a7622d9"),
+                            Brand = "Seagete",
+                            Description = "HDD",
                             IsDeleted = false,
-                            PartBrand = "Seagete",
-                            PartDescription = "HDD",
-                            PartPrice = 100m
+                            Price = 100m
                         });
                 });
 
-            modelBuilder.Entity("PcStore.Data.Models.Product", b =>
+            modelBuilder.Entity("PcStore.Data.Models.PartClient", b =>
                 {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("CategoryId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("ProductName")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<Guid>("SellerId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CategoryId");
-
-                    b.HasIndex("SellerId");
-
-                    b.ToTable("Products");
-                });
-
-            modelBuilder.Entity("PcStore.Data.Models.ProductClient", b =>
-                {
-                    b.Property<Guid>("ProductId")
+                    b.Property<Guid>("PartId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid>("ClientId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<bool>("IsDeleted")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bit")
-                        .HasDefaultValue(false);
-
-                    b.HasKey("ProductId", "ClientId");
+                    b.HasKey("PartId", "ClientId");
 
                     b.HasIndex("ClientId");
 
-                    b.ToTable("ProductClients");
-                });
-
-            modelBuilder.Entity("PcStore.Data.Models.ProductLaptop", b =>
-                {
-                    b.Property<Guid>("ProductId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("LaptopId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<bool>("IsDeleted")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bit")
-                        .HasDefaultValue(false);
-
-                    b.HasKey("ProductId", "LaptopId");
-
-                    b.HasIndex("LaptopId");
-
-                    b.ToTable("ProductLaptop");
-                });
-
-            modelBuilder.Entity("PcStore.Data.Models.ProductPart", b =>
-                {
-                    b.Property<Guid>("ProductId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("PartId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<bool>("IsDeleted")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bit")
-                        .HasDefaultValue(false);
-
-                    b.HasKey("ProductId", "PartId");
-
-                    b.HasIndex("PartId");
-
-                    b.ToTable("ProductPart");
+                    b.ToTable("PartsClients");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Guid>", b =>
@@ -501,109 +414,59 @@ namespace PcStore.Data.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("PcStore.Data.Models.Product", b =>
-                {
-                    b.HasOne("PcStore.Data.Models.Category", "Category")
-                        .WithMany("Products")
-                        .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("PcStore.Data.Models.ApplicationUser", "Seller")
-                        .WithMany()
-                        .HasForeignKey("SellerId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Category");
-
-                    b.Navigation("Seller");
-                });
-
-            modelBuilder.Entity("PcStore.Data.Models.ProductClient", b =>
+            modelBuilder.Entity("PcStore.Data.Models.LaptopClient", b =>
                 {
                     b.HasOne("PcStore.Data.Models.ApplicationUser", "Client")
-                        .WithMany("ProductsClients")
+                        .WithMany("ClientsLaptops")
                         .HasForeignKey("ClientId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("PcStore.Data.Models.Product", "Product")
-                        .WithMany("ProductsClients")
-                        .HasForeignKey("ProductId")
+                    b.HasOne("PcStore.Data.Models.Laptop", "Laptop")
+                        .WithMany("LaptopsClients")
+                        .HasForeignKey("LaptopId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Client");
 
-                    b.Navigation("Product");
-                });
-
-            modelBuilder.Entity("PcStore.Data.Models.ProductLaptop", b =>
-                {
-                    b.HasOne("PcStore.Data.Models.Laptop", "Laptop")
-                        .WithMany("LaptopsProducts")
-                        .HasForeignKey("LaptopId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.HasOne("PcStore.Data.Models.Product", "Product")
-                        .WithMany("ProductsLaptops")
-                        .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
                     b.Navigation("Laptop");
-
-                    b.Navigation("Product");
                 });
 
-            modelBuilder.Entity("PcStore.Data.Models.ProductPart", b =>
+            modelBuilder.Entity("PcStore.Data.Models.PartClient", b =>
                 {
+                    b.HasOne("PcStore.Data.Models.ApplicationUser", "Client")
+                        .WithMany("ClientsParts")
+                        .HasForeignKey("ClientId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
                     b.HasOne("PcStore.Data.Models.Part", "Part")
-                        .WithMany("PartsProducts")
+                        .WithMany("PartsClients")
                         .HasForeignKey("PartId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("PcStore.Data.Models.Product", "Product")
-                        .WithMany("ProductsParts")
-                        .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                    b.Navigation("Client");
 
                     b.Navigation("Part");
-
-                    b.Navigation("Product");
                 });
 
             modelBuilder.Entity("PcStore.Data.Models.ApplicationUser", b =>
                 {
-                    b.Navigation("ProductsClients");
-                });
+                    b.Navigation("ClientsLaptops");
 
-            modelBuilder.Entity("PcStore.Data.Models.Category", b =>
-                {
-                    b.Navigation("Products");
+                    b.Navigation("ClientsParts");
                 });
 
             modelBuilder.Entity("PcStore.Data.Models.Laptop", b =>
                 {
-                    b.Navigation("LaptopsProducts");
+                    b.Navigation("LaptopsClients");
                 });
 
             modelBuilder.Entity("PcStore.Data.Models.Part", b =>
                 {
-                    b.Navigation("PartsProducts");
-                });
-
-            modelBuilder.Entity("PcStore.Data.Models.Product", b =>
-                {
-                    b.Navigation("ProductsClients");
-
-                    b.Navigation("ProductsLaptops");
-
-                    b.Navigation("ProductsParts");
+                    b.Navigation("PartsClients");
                 });
 #pragma warning restore 612, 618
         }

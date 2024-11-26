@@ -6,13 +6,14 @@
     {
         public ApplicationUser()
         {
-            // ReSharper disable once VirtualMemberCallInConstructor
             this.Id = Guid.NewGuid();
         }
 
-        public virtual ICollection<ProductClient> ProductsClients { get; set; }
-            = new HashSet<ProductClient>();
+        public virtual ICollection<LaptopClient> ClientsLaptops { get; set; }
+            = new HashSet<LaptopClient>();
 
-      
+        public virtual ICollection<PartClient> ClientsParts { get; set; }
+           = new HashSet<PartClient>();
+
     }
 }

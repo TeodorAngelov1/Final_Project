@@ -7,20 +7,20 @@
     public class AddLaptopModel 
     {
         [Required]
-        [MaxLength(NameMaxLength)]
-        [MinLength(NameMinLength)]
-        public string LaptopName { get; set; } = null!;
+        [MaxLength(BrandMaxLength)]
+        [MinLength(BrandMinLength)]
+        public string Brand { get; set; } = null!;
 
         [Required]
         [MaxLength(DescriptionMaxLength)]
         [MinLength(DescriptionMinLength)]
-        public string LaptopDescription { get; set; } = null!;
+        public string Description { get; set; } = null!;
 
         [Required]
         [Range(PriceMinValue, PriceMaxValue)]
-        public decimal LaptopPrice { get; set; }
+        public decimal Price { get; set; }
 
-        public string? LaptopImageUrl { get; set; }
+        public string? ImageUrl { get; set; }
         
     }
 }

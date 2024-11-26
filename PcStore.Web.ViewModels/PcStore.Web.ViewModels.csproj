@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <Folder Include="MyCart\" />
-    <Folder Include="Product\" />
     <Folder Include="Part\" />
   </ItemGroup>
 

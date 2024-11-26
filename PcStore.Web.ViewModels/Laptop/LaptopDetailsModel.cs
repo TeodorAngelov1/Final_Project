@@ -4,13 +4,13 @@
     public class LaptopDetailsModel 
     {
         public string Id { get; set; } = null!;
-        public string LaptopName { get; set; } = null!;
+        public string Brand { get; set; } = null!;
 
-        public string LaptopDescription { get; set; } = null!;
+        public string Description { get; set; } = null!;
 
-        public decimal LaptopPrice { get; set; }
+        public decimal Price { get; set; }
 
-        public string? LaptopImageUrl { get; set; }
+        public string? ImageUrl { get; set; }
         
     }
 }

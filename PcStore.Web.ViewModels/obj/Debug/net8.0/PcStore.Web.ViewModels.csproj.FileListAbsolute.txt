@@ -34,3 +34,21 @@ C:\Users\s1231\Desktop\New folder\PcStore.Web.ViewModels\bin\Debug\net8.0\PcStor
 C:\Users\s1231\Desktop\New folder\PcStore.Web.ViewModels\bin\Debug\net8.0\PcStore.Data.Models.pdb
 C:\Users\s1231\Desktop\New folder\PcStore.Web.ViewModels\obj\Debug\net8.0\PcStore..0B3AF094.Up2Date
 C:\Users\s1231\Desktop\New folder\PcStore.Web.ViewModels\obj\Debug\net8.0\ref\PcStore.Web.ViewModels.dll
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Web.ViewModels\bin\Debug\net8.0\PcStore.Web.ViewModels.deps.json
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Web.ViewModels\bin\Debug\net8.0\PcStore.Web.ViewModels.dll
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Web.ViewModels\bin\Debug\net8.0\PcStore.Web.ViewModels.pdb
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Web.ViewModels\bin\Debug\net8.0\PcStore.Common.dll
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Web.ViewModels\bin\Debug\net8.0\PcStore.Data.Models.dll
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Web.ViewModels\bin\Debug\net8.0\PcStore.Common.pdb
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Web.ViewModels\bin\Debug\net8.0\PcStore.Data.Models.pdb
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Web.ViewModels\obj\Debug\net8.0\PcStore.Web.ViewModels.csproj.AssemblyReference.cache
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Web.ViewModels\obj\Debug\net8.0\PcStore.Web.ViewModels.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Web.ViewModels\obj\Debug\net8.0\PcStore.Web.ViewModels.AssemblyInfoInputs.cache
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Web.ViewModels\obj\Debug\net8.0\PcStore.Web.ViewModels.AssemblyInfo.cs
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Web.ViewModels\obj\Debug\net8.0\PcStore.Web.ViewModels.csproj.CoreCompileInputs.cache
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Web.ViewModels\obj\Debug\net8.0\PcStore.Web.ViewModels.sourcelink.json
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Web.ViewModels\obj\Debug\net8.0\PcStore..0B3AF094.Up2Date
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Web.ViewModels\obj\Debug\net8.0\PcStore.Web.ViewModels.dll
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Web.ViewModels\obj\Debug\net8.0\refint\PcStore.Web.ViewModels.dll
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Web.ViewModels\obj\Debug\net8.0\PcStore.Web.ViewModels.pdb
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Web.ViewModels\obj\Debug\net8.0\ref\PcStore.Web.ViewModels.dll

@@ -127,5 +127,6 @@ namespace PcStore.Web.Controllers
                .EditLaptopAsync(laptopGuid, laptop);
             return RedirectToAction(nameof(Details));
         }
+
     }
 }

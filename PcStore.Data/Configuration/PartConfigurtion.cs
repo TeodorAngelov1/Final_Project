@@ -12,22 +12,22 @@ namespace PcStore.Data.Configuration
             builder.HasKey(m => m.Id);
 
             builder
-                .Property(m => m.PartBrand)
+                .Property(m => m.Brand)
                 .IsRequired(true)
-                .HasMaxLength(NameMaxLength);
+                .HasMaxLength(BrandMaxLength);
 
             builder
-                .Property(m => m.PartDescription)
+                .Property(m => m.Description)
                 .IsRequired(true)
                 .HasMaxLength(DescriptionMaxLength);
 
             builder
-                .Property(m => m.PartPrice)
+                .Property(m => m.Price)
                 .IsRequired(true)
                 .HasMaxLength(PriceMaxValue);
 
             builder
-                .Property(m => m.PartImageUrl)
+                .Property(m => m.ImageUrl)
                 .IsRequired(false);
 
             builder.HasData(this.GenerateParts());
@@ -38,22 +38,22 @@ namespace PcStore.Data.Configuration
             {
                 new Part()
                 {
-                    PartBrand = "Samsung",
-                    PartDescription = "RAM Memory",
-                    PartPrice = 200
+                    Brand = "Samsung",
+                    Description = "RAM Memory",
+                    Price = 200
 
                 },
                 new Part()
                 {
-                    PartBrand = "Kingston",
-                    PartDescription = "SSD",
-                    PartPrice = 800
+                    Brand = "Kingston",
+                    Description = "SSD",
+                    Price = 800
                 },
                 new Part()
                 {
-                    PartBrand= "Seagete",
-                    PartDescription = "HDD",
-                    PartPrice = 100
+                    Brand= "Seagete",
+                    Description = "HDD",
+                    Price = 100
                 }
             };
 

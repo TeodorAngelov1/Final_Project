@@ -17,9 +17,9 @@ namespace PcStore.Data
         {
         }
 
-        public virtual DbSet<Product> Products { get; set; } = null!;
-        public virtual DbSet<Category> Categories { get; set; } = null!;
-        public virtual DbSet<ProductClient> ProductClients { get; set; } = null!;
+        public virtual DbSet<PartClient> PartsClients { get; set; } = null!;
+        public virtual DbSet<LaptopClient> LaptopsClients { get; set; } = null!;
+
         public virtual DbSet<Part> Parts { get; set; } = null!;
         public virtual DbSet<Laptop> Laptops { get; set; } = null!;
 

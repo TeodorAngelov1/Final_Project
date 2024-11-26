@@ -13,14 +13,14 @@
     <div class="col-md-6">
         <div class="card">
             <div class="card-body">
-                <h3 class="card-title text-center">@Model.LaptopName</h3>
+                <h3 class="card-title text-center">@Model.Brand</h3>
                 <p class="mb-0"><strong>Added By:</strong> @Model.Seller</p>
-                <p class="text-danger mt-3">Are you sure you want to delete @(Model.LaptopName)?</p>
+                <p class="text-danger mt-3">Are you sure you want to delete @(Model.Brand)?</p>
             </div>
             <div class="card-footer">
                 <form asp-action="Delete" method="post">
                     <input type="hidden" asp-for="Id" />
-                    <input type="hidden" asp-for="LaptopName" />
+                    <input type="hidden" asp-for="Brand" />
                     <input type="hidden" asp-for="SellerId" />
                     <button type="submit" class="btn btn-danger">Confirm Delete</button>
                     <a asp-controller="Laptop" asp-action="Details" asp-route-id="@Model.Id" class="btn btn-warning">Cancel</a>

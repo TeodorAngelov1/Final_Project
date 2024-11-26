@@ -20,3 +20,15 @@ C:\Users\s1231\Desktop\New folder\PcStore.Common\obj\Debug\net8.0\PcStore.Common
 C:\Users\s1231\Desktop\New folder\PcStore.Common\obj\Debug\net8.0\refint\PcStore.Common.dll
 C:\Users\s1231\Desktop\New folder\PcStore.Common\obj\Debug\net8.0\PcStore.Common.pdb
 C:\Users\s1231\Desktop\New folder\PcStore.Common\obj\Debug\net8.0\ref\PcStore.Common.dll
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Common\bin\Debug\net8.0\PcStore.Common.deps.json
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Common\bin\Debug\net8.0\PcStore.Common.dll
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Common\bin\Debug\net8.0\PcStore.Common.pdb
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Common\obj\Debug\net8.0\PcStore.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Common\obj\Debug\net8.0\PcStore.Common.AssemblyInfoInputs.cache
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Common\obj\Debug\net8.0\PcStore.Common.AssemblyInfo.cs
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Common\obj\Debug\net8.0\PcStore.Common.csproj.CoreCompileInputs.cache
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Common\obj\Debug\net8.0\PcStore.Common.sourcelink.json
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Common\obj\Debug\net8.0\PcStore.Common.dll
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Common\obj\Debug\net8.0\refint\PcStore.Common.dll
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Common\obj\Debug\net8.0\PcStore.Common.pdb
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Common\obj\Debug\net8.0\ref\PcStore.Common.dll

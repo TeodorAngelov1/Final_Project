@@ -12,22 +12,22 @@ namespace PcStore.Data.Configuration
             builder.HasKey(m => m.Id);
 
             builder
-                .Property(m => m.LaptopName)
-                .IsRequired(true)
-                .HasMaxLength(NameMaxLength);
+               .Property(m => m.Brand)
+               .IsRequired(true)
+               .HasMaxLength(BrandMaxLength);
 
             builder
-                .Property(m => m.LaptopDescription)
+                .Property(m => m.Description)
                 .IsRequired(true)
                 .HasMaxLength(DescriptionMaxLength);
 
             builder
-                .Property(m => m.LaptopPrice)
+                .Property(m => m.Price)
                 .IsRequired(true)
                 .HasMaxLength(PriceMaxValue);
 
             builder
-                .Property(m => m.LaptopImageUrl)
+                .Property(m => m.ImageUrl)
                 .IsRequired(false);
 
             builder.HasData(this.GenerateLaptops());
@@ -38,22 +38,22 @@ namespace PcStore.Data.Configuration
             {
                 new Laptop()
                 {
-                    LaptopName = "HP",
-                    LaptopDescription = "Nice Laptop",
-                    LaptopPrice = 1200
+                    Brand = "HP",
+                    Description = "Nice Laptop",
+                    Price = 1200
 
                 },
                 new Laptop()
                 {
-                    LaptopName = "Dell",
-                    LaptopDescription = "Buy now",
-                    LaptopPrice = 1800
+                    Brand = "Dell",
+                    Description = "Buy now",
+                    Price = 1800
                 },
                 new Laptop()
                 {
-                    LaptopName = "Lenovo",
-                    LaptopDescription = "Best Laptop",
-                    LaptopPrice = 3000
+                    Brand = "Lenovo",
+                    Description = "Best Laptop",
+                    Price = 3000
                 }
             };
 

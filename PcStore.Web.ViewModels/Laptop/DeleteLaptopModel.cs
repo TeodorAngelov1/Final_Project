@@ -10,7 +10,7 @@ namespace PcStore.Web.ViewModels.Laptop
     public class DeleteLaptopModel
     {
         public string Id { get; set; } = null!;
-        public string LaptopName { get; set; } = null!;
+        public string Brand { get; set; } = null!;
 
         [Required]
         public string Seller { get; set; } = string.Empty;

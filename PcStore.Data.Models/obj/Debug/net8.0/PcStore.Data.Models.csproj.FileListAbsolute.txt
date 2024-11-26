@@ -22,3 +22,16 @@ C:\Users\s1231\Desktop\New folder\PcStore.Data.Models\obj\Debug\net8.0\PcStore.D
 C:\Users\s1231\Desktop\New folder\PcStore.Data.Models\obj\Debug\net8.0\refint\PcStore.Data.Models.dll
 C:\Users\s1231\Desktop\New folder\PcStore.Data.Models\obj\Debug\net8.0\PcStore.Data.Models.pdb
 C:\Users\s1231\Desktop\New folder\PcStore.Data.Models\obj\Debug\net8.0\ref\PcStore.Data.Models.dll
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Data.Models\bin\Debug\net8.0\PcStore.Data.Models.deps.json
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Data.Models\bin\Debug\net8.0\PcStore.Data.Models.dll
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Data.Models\bin\Debug\net8.0\PcStore.Data.Models.pdb
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Data.Models\obj\Debug\net8.0\PcStore.Data.Models.csproj.AssemblyReference.cache
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Data.Models\obj\Debug\net8.0\PcStore.Data.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Data.Models\obj\Debug\net8.0\PcStore.Data.Models.AssemblyInfoInputs.cache
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Data.Models\obj\Debug\net8.0\PcStore.Data.Models.AssemblyInfo.cs
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Data.Models\obj\Debug\net8.0\PcStore.Data.Models.csproj.CoreCompileInputs.cache
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Data.Models\obj\Debug\net8.0\PcStore.Data.Models.sourcelink.json
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Data.Models\obj\Debug\net8.0\PcStore.Data.Models.dll
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Data.Models\obj\Debug\net8.0\refint\PcStore.Data.Models.dll
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Data.Models\obj\Debug\net8.0\PcStore.Data.Models.pdb
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Data.Models\obj\Debug\net8.0\ref\PcStore.Data.Models.dll

@@ -18,10 +18,10 @@
         {
            Laptop laptop = new Laptop()
             {
-                LaptopName = inputModel.LaptopName,
-                LaptopPrice = inputModel.LaptopPrice,
-                LaptopDescription = inputModel.LaptopDescription,
-                LaptopImageUrl = inputModel.LaptopImageUrl
+                Brand = inputModel.Brand,
+                Price = inputModel.Price,
+                Description = inputModel.Description,
+                ImageUrl = inputModel.ImageUrl
             };
             await context.Laptops.AddAsync(laptop);
             await context.SaveChangesAsync();
@@ -37,7 +37,7 @@
                 .Select(p => new DeleteLaptopModel()
                 {
                     Id = p.Id.ToString(),
-                    LaptopName = p.LaptopName
+                    Brand = p.Brand
                 })
                 .FirstOrDefaultAsync();
 
@@ -61,10 +61,10 @@
                 .Where(g => g.IsDeleted == false)
                 .FirstOrDefaultAsync();
 
-            entity.LaptopName = model.LaptopName;
-            entity.LaptopPrice = model.LaptopPrice;
-            entity.LaptopDescription = model.LaptopDescription;
-            entity.LaptopImageUrl = model.LaptopImageUrl;
+            entity.Brand = model.Brand;
+            entity.Price = model.Price;
+            entity.Description = model.Description;
+            entity.ImageUrl = model.ImageUrl;
 
                 await context.SaveChangesAsync();
             
@@ -79,10 +79,10 @@
                 .Select(p => new AllLaptopsModel()
                 {
                     Id = p.Id.ToString(),
-                    LaptopName = p.LaptopName,
-                    LaptopImageUrl = p.LaptopImageUrl,
-                    LaptopPrice = p.LaptopPrice,
-                    LaptopDescription = p.LaptopDescription
+                    Brand = p.Brand,
+                    ImageUrl = p.ImageUrl,
+                    Price = p.Price,
+                    Description = p.Description
                 })
                 .AsNoTracking()
                 .ToListAsync();
@@ -96,10 +96,10 @@
                 .FindAsync(id);
             var entity = new EditLaptopModel()
             {
-                LaptopName = model.LaptopName,
-                LaptopDescription = model.LaptopDescription,
-                LaptopImageUrl = model.LaptopImageUrl,
-                LaptopPrice = model.LaptopPrice
+                Brand = model.Brand,
+                Description = model.Description,
+                ImageUrl = model.ImageUrl,
+                Price = model.Price
             };
             return entity;
         }
@@ -113,10 +113,10 @@
                .Select(p => new LaptopDetailsModel()
                {
                    Id = p.Id.ToString(),
-                   LaptopName = p.LaptopName,
-                   LaptopPrice = p.LaptopPrice,
-                   LaptopDescription = p.LaptopDescription,
-                   LaptopImageUrl = p.LaptopImageUrl ?? string.Empty
+                   Brand = p.Brand,
+                   Price = p.Price,
+                   Description = p.Description,
+                   ImageUrl = p.ImageUrl ?? string.Empty
                })
                .FirstOrDefaultAsync();
 

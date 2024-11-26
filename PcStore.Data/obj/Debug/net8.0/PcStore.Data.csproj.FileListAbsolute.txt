@@ -36,3 +36,23 @@ C:\Users\s1231\Desktop\New folder\PcStore.Data\obj\Debug\net8.0\refint\PcStore.D
 C:\Users\s1231\Desktop\New folder\PcStore.Data\obj\Debug\net8.0\PcStore.Data.pdb
 C:\Users\s1231\Desktop\New folder\PcStore.Data\obj\Debug\net8.0\PcStore.Data.genruntimeconfig.cache
 C:\Users\s1231\Desktop\New folder\PcStore.Data\obj\Debug\net8.0\ref\PcStore.Data.dll
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Data\obj\Debug\net8.0\PcStore.Data.csproj.AssemblyReference.cache
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Data\obj\Debug\net8.0\PcStore.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Data\obj\Debug\net8.0\PcStore.Data.AssemblyInfoInputs.cache
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Data\obj\Debug\net8.0\PcStore.Data.AssemblyInfo.cs
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Data\obj\Debug\net8.0\PcStore.Data.csproj.CoreCompileInputs.cache
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Data\obj\Debug\net8.0\PcStore.Data.sourcelink.json
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Data\obj\Debug\net8.0\PcStore.Data.dll
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Data\obj\Debug\net8.0\refint\PcStore.Data.dll
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Data\obj\Debug\net8.0\PcStore.Data.pdb
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Data\bin\Debug\net8.0\PcStore.Data.deps.json
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Data\bin\Debug\net8.0\PcStore.Data.runtimeconfig.json
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Data\bin\Debug\net8.0\PcStore.Data.dll
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Data\bin\Debug\net8.0\PcStore.Data.pdb
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Data\bin\Debug\net8.0\PcStore.Common.dll
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Data\bin\Debug\net8.0\PcStore.Data.Models.dll
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Data\bin\Debug\net8.0\PcStore.Common.pdb
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Data\bin\Debug\net8.0\PcStore.Data.Models.pdb
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Data\obj\Debug\net8.0\PcStore..594F83FE.Up2Date
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Data\obj\Debug\net8.0\PcStore.Data.genruntimeconfig.cache
+C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Data\obj\Debug\net8.0\ref\PcStore.Data.dll

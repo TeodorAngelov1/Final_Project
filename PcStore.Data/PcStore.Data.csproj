@@ -20,4 +20,8 @@
     <ProjectReference Include="..\PcStore.Data.Models\PcStore.Data.Models.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
 </Project>

@@ -15,5 +15,6 @@
 
         Task<EditLaptopModel> GetById(Guid id);
 
+
     }
 }
