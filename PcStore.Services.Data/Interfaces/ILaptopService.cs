@@ -3,17 +3,17 @@
     using Web.ViewModels.Laptop;
     public interface ILaptopService
     {
-        Task<IEnumerable<AllLaptopsModel>> GetAllLaptopsAsync();
+        Task<IEnumerable<AllPartModel>> GetAllLaptopsAsync();
 
         Task<bool> DeleteLaptopAsync(Guid id);
 
-        Task<bool> AddLaptopAsync(AddLaptopModel inputModel);
+        Task<bool> AddLaptopAsync(AddPartModel inputModel);
 
-        Task<EditLaptopModel> EditLaptopAsync(Guid id, EditLaptopModel model);
+        Task<EditPartModel> EditLaptopAsync(Guid id, EditPartModel model);
 
-        Task<LaptopDetailsModel?> GetLaptopDetailsByIdAsync(Guid id);
+        Task<PartDetailsModel?> GetLaptopDetailsByIdAsync(Guid id);
 
-        Task<EditLaptopModel> GetById(Guid id);
+        Task<EditPartModel> GetById(Guid id);
 
 
     }

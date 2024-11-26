@@ -20,7 +20,7 @@ namespace PcStore.Data.Models
 
         public bool IsDeleted { get; set; }
 
-        public IEnumerable<LaptopClient> LaptopsClients { get; set; } = new List<LaptopClient>();
+        public List<LaptopClient> LaptopsClients { get; set; } = new List<LaptopClient>();
 
     }
 }

@@ -1,6 +1,5 @@
-﻿namespace PcStore.Web.ViewModels.Laptop
+﻿namespace PcStore.Web.ViewModels.Part
 {
-    using Data.Models;
     public class PartDetailsModel 
     {
         public string Id { get; set; } = null!;

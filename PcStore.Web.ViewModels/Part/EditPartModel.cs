@@ -1,6 +1,6 @@
-﻿namespace PcStore.Web.ViewModels.Laptop
+﻿namespace PcStore.Web.ViewModels.Part
 {
-    using static Common.EntityValidationConstants.Laptop;
+    using static Common.EntityValidationConstants.Part;
     using System.ComponentModel.DataAnnotations;
     
     public class EditPartModel 

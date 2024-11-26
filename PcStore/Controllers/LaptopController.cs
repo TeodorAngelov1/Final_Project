@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using PcStore.Services.Data.Interfaces;
 using PcStore.Web.ViewModels.Laptop;
+using System.Security.Claims;
 
 namespace PcStore.Web.Controllers
 {
@@ -9,15 +10,15 @@ namespace PcStore.Web.Controllers
     {
         private readonly ILaptopService laptopService;
 
-        public LaptopController(ILaptopService laptopService)
+        public LaptopController(ILaptopService _laptopService)
             : base()
         {
-            this.laptopService = laptopService;
+            this.laptopService = _laptopService;
         }
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            IEnumerable<AllLaptopsModel> allLaptops =
+            IEnumerable<AllPartModel> allLaptops =
                  await laptopService.GetAllLaptopsAsync();
 
              return this.View(allLaptops);
@@ -34,7 +35,7 @@ namespace PcStore.Web.Controllers
                 return this.RedirectToAction(nameof(Index));
             }
 
-            LaptopDetailsModel? laptop = await this.laptopService
+            PartDetailsModel? laptop = await this.laptopService
                 .GetLaptopDetailsByIdAsync(laptopGuid);
             if (laptop == null)
             {
@@ -49,17 +50,16 @@ namespace PcStore.Web.Controllers
         [Authorize]
         public async Task<IActionResult> Add()
         {
-            var model = new AddLaptopModel();
+            var model = new AddPartModel();
             return View(model);
         }
 
         [HttpPost]
         [Authorize]
-        public async Task<IActionResult> Add(AddLaptopModel inputModel)
+        public async Task<IActionResult> Add(AddPartModel inputModel)
         {
             if (!this.ModelState.IsValid)
             {
-                // Render the same form with user entered values + model errors 
                 return this.View(inputModel);
             }
 
@@ -75,7 +75,7 @@ namespace PcStore.Web.Controllers
         [Authorize]
         public async Task<IActionResult> Delete(string? id)
         {
-            var model = new DeleteLaptopModel();
+            var model = new DeletePartModel();
             Guid laptopGuid = Guid.Empty;
             bool isGuidValid = this.IsGuidValid(id, ref laptopGuid);
             if (!isGuidValid)
@@ -114,7 +114,7 @@ namespace PcStore.Web.Controllers
 
         [HttpPost]
         [Authorize]
-        public async Task<IActionResult> Edit(string? id, EditLaptopModel laptop)
+        public async Task<IActionResult> Edit(string? id, EditPartModel laptop)
         {
             Guid laptopGuid = Guid.Empty;
             bool isGuidValid = this.IsGuidValid(id, ref laptopGuid);
@@ -128,5 +128,6 @@ namespace PcStore.Web.Controllers
             return RedirectToAction(nameof(Details));
         }
 
+        
     }
 }

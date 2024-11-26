@@ -1,8 +1,8 @@
-﻿namespace PcStore.Web.ViewModels.Laptop
+﻿namespace PcStore.Web.ViewModels.Part
 {
     using Data.Models;
     using System.ComponentModel.DataAnnotations;
-    using static Common.EntityValidationConstants.Laptop;
+    using static Common.EntityValidationConstants.Part;
     public class AddPartToMyCartModel 
     {
         [Required]
@@ -21,7 +21,7 @@
 
         public string ImageUrl { get; set; } = string.Empty;
 
-        public IList<Laptop> Laptops { get; set; }
-            = new List<Laptop>();
+        public IList<Part> Parts { get; set; }
+            = new List<Part>();
     }
 }

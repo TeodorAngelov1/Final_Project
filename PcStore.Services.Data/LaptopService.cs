@@ -5,6 +5,7 @@
     using PcStore.Data.Models;
     using PcStore.Services.Data.Interfaces;
     using PcStore.Web.ViewModels.Laptop;
+    using System.Security.Claims;
 
     public class LaptopService : BaseService, ILaptopService
     {
@@ -14,7 +15,7 @@
             context = _context;
         }
 
-        public async Task<bool> AddLaptopAsync(AddLaptopModel inputModel)
+        public async Task<bool> AddLaptopAsync(AddPartModel inputModel)
         {
            Laptop laptop = new Laptop()
             {
@@ -34,7 +35,7 @@
                 .Where(p => p.Id == id)
                 .Where(p => p.IsDeleted == false)
                 .AsNoTracking()
-                .Select(p => new DeleteLaptopModel()
+                .Select(p => new DeletePartModel()
                 {
                     Id = p.Id.ToString(),
                     Brand = p.Brand
@@ -54,7 +55,7 @@
             return true;
         }
 
-        public async Task<EditLaptopModel> EditLaptopAsync(Guid id, EditLaptopModel model)
+        public async Task<EditPartModel> EditLaptopAsync(Guid id, EditPartModel model)
         {
              var entity = await context.Laptops
                 .Where(g => g.Id == id)
@@ -72,11 +73,11 @@
             return model;
         }
 
-        public async Task<IEnumerable<AllLaptopsModel>> GetAllLaptopsAsync()
+        public async Task<IEnumerable<AllPartModel>> GetAllLaptopsAsync()
         {
             var model = await context.Laptops
                 .Where(p => p.IsDeleted == false)
-                .Select(p => new AllLaptopsModel()
+                .Select(p => new AllPartModel()
                 {
                     Id = p.Id.ToString(),
                     Brand = p.Brand,
@@ -84,17 +85,16 @@
                     Price = p.Price,
                     Description = p.Description
                 })
-                .AsNoTracking()
                 .ToListAsync();
 
             return model;
         }
 
-        public async Task<EditLaptopModel> GetById(Guid id)
+        public async Task<EditPartModel> GetById(Guid id)
         {
             var model = await context.Laptops
                 .FindAsync(id);
-            var entity = new EditLaptopModel()
+            var entity = new EditPartModel()
             {
                 Brand = model.Brand,
                 Description = model.Description,
@@ -104,13 +104,13 @@
             return entity;
         }
 
-        public async Task<LaptopDetailsModel?> GetLaptopDetailsByIdAsync(Guid id)
+        public async Task<PartDetailsModel?> GetLaptopDetailsByIdAsync(Guid id)
         {
             var model = await context.Laptops
                .Where(p => p.Id == id)
                .Where(p => p.IsDeleted == false)
                .AsNoTracking()
-               .Select(p => new LaptopDetailsModel()
+               .Select(p => new PartDetailsModel()
                {
                    Id = p.Id.ToString(),
                    Brand = p.Brand,
@@ -121,6 +121,16 @@
                .FirstOrDefaultAsync();
 
             return model;
+        }
+
+       public async Task<Laptop> GetLaptopAsync(string id)
+        {
+           var laptop = await context.Laptops
+               .Where(p => p.Id.ToString() == id)
+               .Include(p => p.LaptopsClients)
+               .FirstOrDefaultAsync();
+
+            return laptop;
         }
     }
 }

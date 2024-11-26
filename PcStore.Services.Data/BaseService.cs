@@ -1,6 +1,8 @@
 ﻿namespace PcStore.Services.Data
 {
     using PcStore.Services.Data.Interfaces;
+    using System.Security.Claims;
+
     public class BaseService : IBaseService
     {
         public bool IsGuidValid(string? id, ref Guid parsedGuid)
