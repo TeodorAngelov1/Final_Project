@@ -15,5 +15,7 @@
         public virtual ICollection<PartClient> ClientsParts { get; set; }
            = new HashSet<PartClient>();
 
+        public virtual ICollection<AccessoryClient> ClientsAccessories { get; set; }
+           = new HashSet<AccessoryClient>();
     }
 }

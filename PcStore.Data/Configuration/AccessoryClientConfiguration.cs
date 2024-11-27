@@ -1,26 +1,27 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using PcStore.Data.Models;
+
 namespace PcStore.Data.Configuration
 {
-    public class LaptopClientConfiguration : IEntityTypeConfiguration<LaptopClient>
+    public class AccessoryClientConfiguration : IEntityTypeConfiguration<AccessoryClient>
     {
-        public void Configure(EntityTypeBuilder<LaptopClient> builder)
+        public void Configure(EntityTypeBuilder<AccessoryClient> builder)
         {
             builder
-                   .HasKey(pc => new { pc.LaptopId, pc.ClientId });
+                  .HasKey(pc => new { pc.AccessoryId, pc.ClientId });
 
-           
+
 
             builder
-              .HasOne(c => c.Laptop)
-              .WithMany(p => p.LaptopsClients)
-              .HasForeignKey(c => c.LaptopId)
+              .HasOne(c => c.Accessory)
+              .WithMany(p => p.AccessoriesClients)
+              .HasForeignKey(c => c.AccessoryId)
               .OnDelete(DeleteBehavior.Restrict);
 
             builder
                 .HasOne(p => p.Client)
-                .WithMany(c => c.ClientsLaptops)
+                .WithMany(c => c.ClientsAccessories)
                 .HasForeignKey(p => p.ClientId)
                 .OnDelete(DeleteBehavior.Restrict);
         }

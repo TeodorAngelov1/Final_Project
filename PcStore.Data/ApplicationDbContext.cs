@@ -18,10 +18,16 @@ namespace PcStore.Data
         }
 
         public virtual DbSet<PartClient> PartsClients { get; set; } = null!;
+
         public virtual DbSet<LaptopClient> LaptopsClients { get; set; } = null!;
 
+        public virtual DbSet<AccessoryClient> AccessoriesClients { get; set; } = null!;
+
         public virtual DbSet<Part> Parts { get; set; } = null!;
+
         public virtual DbSet<Laptop> Laptops { get; set; } = null!;
+
+        public virtual DbSet<Accessory> Accessories { get; set; } = null!;
 
 
 

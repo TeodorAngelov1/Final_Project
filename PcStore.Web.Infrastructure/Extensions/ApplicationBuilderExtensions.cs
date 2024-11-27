@@ -15,7 +15,6 @@
             ApplicationDbContext dbContext = serviceScope
                 .ServiceProvider
                 .GetRequiredService<ApplicationDbContext>()!;
-           // dbContext.Database.Migrate();
 
             return app;
         }

@@ -1,6 +1,6 @@
 ﻿namespace PcStore.Data.Models
 {
-    public class Laptop
+    public class Accessory
     {
         public Guid Id { get; set; } = Guid.NewGuid();
 
@@ -14,7 +14,6 @@
 
         public bool IsDeleted { get; set; }
 
-        public List<LaptopClient> LaptopsClients { get; set; } = new List<LaptopClient>();
-
+        public List<AccessoryClient> AccessoriesClients { get; set; } = new List<AccessoryClient>();
     }
 }
