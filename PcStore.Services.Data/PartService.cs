@@ -1,36 +1,35 @@
-﻿namespace PcStore.Services.Data
-{
-    using Microsoft.EntityFrameworkCore;
-    using PcStore.Data;
-    using PcStore.Data.Models;
-    using PcStore.Services.Data.Interfaces;
-    using PcStore.Web.ViewModels.Laptop;
+﻿using Microsoft.EntityFrameworkCore;
+using PcStore.Data;
+using PcStore.Data.Models;
+using PcStore.Services.Data.Interfaces;
+using PcStore.Web.ViewModels.Part;
 
-    public class LaptopService : BaseService, ILaptopService
+namespace PcStore.Services.Data
+{
+    public class PartService : BaseService, IPartService
     {
         private readonly ApplicationDbContext context;
-        public LaptopService(ApplicationDbContext _context)
+        public PartService(ApplicationDbContext _context)
         {
             context = _context;
         }
-
-        public async Task<bool> AddLaptopAsync(AddPartModel inputModel)
+        public async Task<bool> AddPartAsync(AddPartModel inputModel)
         {
-           Laptop laptop = new Laptop()
+            Part part = new Part()
             {
                 Brand = inputModel.Brand,
                 Price = inputModel.Price,
                 Description = inputModel.Description,
                 ImageUrl = inputModel.ImageUrl
             };
-            await context.Laptops.AddAsync(laptop);
+            await context.Parts.AddAsync(part);
             await context.SaveChangesAsync();
             return true;
         }
 
-        public async Task<bool> DeleteLaptopAsync(Guid id)
+        public async Task<bool> DeletePartAsync(Guid id)
         {
-            var model = await context.Laptops
+            var model = await context.Parts
                 .Where(p => p.Id == id)
                 .Where(p => p.IsDeleted == false)
                 .Select(p => new DeletePartModel()
@@ -40,22 +39,22 @@
                 })
                 .FirstOrDefaultAsync();
 
-            Laptop? laptop = await context.Laptops
+            Part? part = await context.Parts
                .Where(p => p.Id.ToString() == model.Id)
                .Where(p => p.IsDeleted == false)
                .FirstOrDefaultAsync();
 
-            if (laptop != null)
+            if (part != null)
             {
-                laptop.IsDeleted = true;
+                part.IsDeleted = true;
                 await context.SaveChangesAsync();
             }
             return true;
         }
 
-        public async Task<EditPartModel> EditLaptopAsync(Guid id, EditPartModel model)
+        public async Task<EditPartModel> EditPartAsync(Guid id, EditPartModel model)
         {
-             var entity = await context.Laptops
+            var entity = await context.Parts
                 .Where(g => g.Id == id)
                 .Where(g => g.IsDeleted == false)
                 .FirstOrDefaultAsync();
@@ -65,15 +64,15 @@
             entity.Description = model.Description;
             entity.ImageUrl = model.ImageUrl;
 
-                await context.SaveChangesAsync();
-            
-            
+            await context.SaveChangesAsync();
+
+
             return model;
         }
 
-        public async Task<IEnumerable<AllPartModel>> GetAllLaptopsAsync()
+        public async Task<IEnumerable<AllPartModel>> GetAllPartsAsync()
         {
-            var model = await context.Laptops
+            var model = await context.Parts
                 .Where(p => p.IsDeleted == false)
                 .Select(p => new AllPartModel()
                 {
@@ -90,7 +89,7 @@
 
         public async Task<EditPartModel> GetById(Guid id)
         {
-            var model = await context.Laptops
+            var model = await context.Parts
                 .FindAsync(id);
             var entity = new EditPartModel()
             {
@@ -102,9 +101,9 @@
             return entity;
         }
 
-        public async Task<PartDetailsModel?> GetLaptopDetailsByIdAsync(Guid id)
+        public async Task<PartDetailsModel?> GetPartDetailsByIdAsync(Guid id)
         {
-            var model = await context.Laptops
+            var model = await context.Parts
                .Where(p => p.Id == id)
                .Where(p => p.IsDeleted == false)
                .Select(p => new PartDetailsModel()
@@ -118,16 +117,6 @@
                .FirstOrDefaultAsync();
 
             return model;
-        }
-
-       public async Task<Laptop> GetLaptopAsync(string id)
-        {
-           var laptop = await context.Laptops
-               .Where(p => p.Id.ToString() == id)
-               .Include(p => p.LaptopsClients)
-               .FirstOrDefaultAsync();
-
-            return laptop;
         }
     }
 }
