@@ -3,7 +3,7 @@
     using static Common.EntityValidationConstants.Laptop;
     using System.ComponentModel.DataAnnotations;
     
-    public class EditPartModel 
+    public class EditLaptopModel 
     {
         [Required]
         [MaxLength(BrandMaxLength)]

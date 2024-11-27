@@ -3,7 +3,7 @@
     using Data.Models;
     using System.ComponentModel.DataAnnotations;
     using static Common.EntityValidationConstants.Laptop;
-    public class AddPartToMyCartModel 
+    public class AddLaptopToMyCartModel 
     {
         [Required]
         public string? Id { get; set; }

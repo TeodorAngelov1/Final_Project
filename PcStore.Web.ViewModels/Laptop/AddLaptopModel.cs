@@ -1,10 +1,9 @@
 ﻿namespace PcStore.Web.ViewModels.Laptop
 {
-    using PcStore.Data.Models;
     using static Common.EntityValidationConstants.Laptop;
     using System.ComponentModel.DataAnnotations;
 
-    public class AddPartModel 
+    public class AddLaptopModel 
     {
         [Required]
         [MaxLength(BrandMaxLength)]

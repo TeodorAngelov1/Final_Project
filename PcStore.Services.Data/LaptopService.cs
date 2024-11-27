@@ -14,7 +14,7 @@
             context = _context;
         }
 
-        public async Task<bool> AddLaptopAsync(AddPartModel inputModel)
+        public async Task<bool> AddLaptopAsync(AddLaptopModel inputModel)
         {
            Laptop laptop = new Laptop()
             {
@@ -33,7 +33,7 @@
             var model = await context.Laptops
                 .Where(p => p.Id == id)
                 .Where(p => p.IsDeleted == false)
-                .Select(p => new DeletePartModel()
+                .Select(p => new DeleteLaptopModel()
                 {
                     Id = p.Id.ToString(),
                     Brand = p.Brand
@@ -53,7 +53,7 @@
             return true;
         }
 
-        public async Task<EditPartModel> EditLaptopAsync(Guid id, EditPartModel model)
+        public async Task<EditLaptopModel> EditLaptopAsync(Guid id, EditLaptopModel model)
         {
              var entity = await context.Laptops
                 .Where(g => g.Id == id)
@@ -71,11 +71,11 @@
             return model;
         }
 
-        public async Task<IEnumerable<AllPartModel>> GetAllLaptopsAsync()
+        public async Task<IEnumerable<AllLaptopsModel>> GetAllLaptopsAsync()
         {
             var model = await context.Laptops
                 .Where(p => p.IsDeleted == false)
-                .Select(p => new AllPartModel()
+                .Select(p => new AllLaptopsModel()
                 {
                     Id = p.Id.ToString(),
                     Brand = p.Brand,
@@ -88,11 +88,11 @@
             return model;
         }
 
-        public async Task<EditPartModel> GetById(Guid id)
+        public async Task<EditLaptopModel> GetById(Guid id)
         {
             var model = await context.Laptops
                 .FindAsync(id);
-            var entity = new EditPartModel()
+            var entity = new EditLaptopModel()
             {
                 Brand = model.Brand,
                 Description = model.Description,
@@ -102,12 +102,12 @@
             return entity;
         }
 
-        public async Task<PartDetailsModel?> GetLaptopDetailsByIdAsync(Guid id)
+        public async Task<LaptopDetailsModel?> GetLaptopDetailsByIdAsync(Guid id)
         {
             var model = await context.Laptops
                .Where(p => p.Id == id)
                .Where(p => p.IsDeleted == false)
-               .Select(p => new PartDetailsModel()
+               .Select(p => new LaptopDetailsModel()
                {
                    Id = p.Id.ToString(),
                    Brand = p.Brand,

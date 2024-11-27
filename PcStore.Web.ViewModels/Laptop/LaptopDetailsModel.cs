@@ -1,7 +1,6 @@
 ﻿namespace PcStore.Web.ViewModels.Laptop
 {
-    using Data.Models;
-    public class PartDetailsModel 
+    public class LaptopDetailsModel 
     {
         public string Id { get; set; } = null!;
         public string Brand { get; set; } = null!;

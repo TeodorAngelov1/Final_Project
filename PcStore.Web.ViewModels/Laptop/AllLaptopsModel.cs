@@ -1,12 +1,6 @@
-﻿
-
-
-namespace PcStore.Web.ViewModels.Laptop
+﻿namespace PcStore.Web.ViewModels.Laptop
 {
-   
-
-    using Data.Models;
-    public class AllPartModel 
+    public class AllLaptopsModel 
     {
         public string Id { get; set; } = null!;
 
