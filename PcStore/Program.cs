@@ -36,6 +36,7 @@ namespace PcStore
             });
 
            builder.Services.AddScoped<ILaptopService, LaptopService>();
+            builder.Services.AddScoped<IPartService, PartService>();
 
             builder.Services.AddControllersWithViews();
             builder.Services.AddRazorPages();

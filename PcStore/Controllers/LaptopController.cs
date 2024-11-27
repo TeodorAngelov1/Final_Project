@@ -15,6 +15,7 @@ namespace PcStore.Web.Controllers
         {
             this.laptopService = _laptopService;
         }
+
         [HttpGet]
         public async Task<IActionResult> Index()
         {
@@ -31,7 +32,6 @@ namespace PcStore.Web.Controllers
             bool isGuidValid = this.IsGuidValid(id, ref laptopGuid);
             if (!isGuidValid)
             {
-                // Invalid id format
                 return this.RedirectToAction(nameof(Index));
             }
 
@@ -39,7 +39,6 @@ namespace PcStore.Web.Controllers
                 .GetLaptopDetailsByIdAsync(laptopGuid);
             if (laptop == null)
             {
-                // Non-existing movie guid
                 return this.RedirectToAction(nameof(Index));
             }
 
@@ -71,6 +70,7 @@ namespace PcStore.Web.Controllers
 
             return this.RedirectToAction(nameof(Index));
         }
+
         [HttpGet]
         [Authorize]
         public async Task<IActionResult> Delete(string? id)
@@ -80,7 +80,6 @@ namespace PcStore.Web.Controllers
             bool isGuidValid = this.IsGuidValid(id, ref laptopGuid);
             if (!isGuidValid)
             {
-                // Invalid id format
                 return this.RedirectToAction(nameof(Index));
             }
 
