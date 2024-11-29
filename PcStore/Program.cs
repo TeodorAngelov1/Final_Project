@@ -35,8 +35,10 @@ namespace PcStore
                 cfg.LoginPath = "/Identity/Account/Login";
             });
 
-           builder.Services.AddScoped<ILaptopService, LaptopService>();
+            builder.Services.AddScoped<ILaptopService, LaptopService>();
             builder.Services.AddScoped<IPartService, PartService>();
+            builder.Services.AddScoped<IAccessoryService, AccessoryService>();
+            builder.Services.AddScoped<IMyCartService, MyCartService>();
 
             builder.Services.AddControllersWithViews();
             builder.Services.AddRazorPages();
@@ -48,11 +50,13 @@ namespace PcStore
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
             {
-                app.UseExceptionHandler("/Home/Error");
+                app.UseStatusCodePagesWithReExecute("/Error{0}");
+                app.UseExceptionHandler("/Error500");
+                app.UseExceptionHandler("/Error404");
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-
+            
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 

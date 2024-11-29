@@ -1,6 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿
+using Microsoft.AspNetCore.Mvc;
 using PcStore.Models;
-using System.Diagnostics;
 
 namespace PcStore.Web.Controllers
 {
@@ -11,10 +11,21 @@ namespace PcStore.Web.Controllers
             return View();
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        public IActionResult Error(int statusCode)
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            var errorViewModel = new ErrorViewModel
+            {
+                StatusCode = statusCode,
+                Message = statusCode switch
+                {
+                    404 => "The page you are looking for could not be found.",
+                    500 => "An unexpected server error occurred.",
+                    _ => "An unexpected error occurred."
+                },
+                Details = statusCode == 500 ? "Please contact support if the issue persists." : null
+            };
+
+            return View(errorViewModel);
         }
     }
 }

@@ -330,6 +330,9 @@
             "projectReferences": {
               "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Data\\PcStore.Data.csproj": {
                 "projectPath": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Data\\PcStore.Data.csproj"
+              },
+              "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Services.Data\\PcStore.Services.Data.csproj": {
+                "projectPath": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Services.Data\\PcStore.Services.Data.csproj"
               }
             }
           }

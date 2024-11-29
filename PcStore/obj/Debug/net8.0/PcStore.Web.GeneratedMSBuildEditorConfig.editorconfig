@@ -54,6 +54,26 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/s1231/Desktop/New folder/PcStore/Views/Accessory/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzb3J5XEFkZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/s1231/Desktop/New folder/PcStore/Views/Accessory/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzb3J5XERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/s1231/Desktop/New folder/PcStore/Views/Accessory/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzb3J5XERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/s1231/Desktop/New folder/PcStore/Views/Accessory/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzb3J5XEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/s1231/Desktop/New folder/PcStore/Views/Accessory/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzb3J5XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/s1231/Desktop/New folder/PcStore/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -84,6 +104,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/s1231/Desktop/New folder/PcStore/Views/MyCart/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXlDYXJ0XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/s1231/Desktop/New folder/PcStore/Views/MyCart/RemoveProduct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTXlDYXJ0XFJlbW92ZVByb2R1Y3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/s1231/Desktop/New folder/PcStore/Views/Part/Add.cshtml]

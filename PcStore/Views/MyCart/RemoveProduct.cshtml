@@ -1,7 +1,7 @@
-﻿@using PcStore.Web.ViewModels.Laptop
-@model DeleteLaptopModel
+﻿@using PcStore.Web.ViewModels.MyCart
+@model RemoveFromCartModel
 @{
-    ViewData["Title"] = "Delete Laptop";
+    ViewData["Title"] = "Remove from Cart";
 }
 <div class="d-flex justify-content-between align-items-center mb-3" style="margin-top: 20px;">
     <h2>@ViewData["Title"]</h2>
@@ -22,7 +22,7 @@
                     <input type="hidden" asp-for="Id" />
                     <input type="hidden" asp-for="Brand" />
                     <input type="hidden" asp-for="SellerId" />
-                    <button type="submit" class="btn btn-danger">Confirm Delete</button>
+                    <button type="submit" class="btn btn-danger">Confirm</button>
                     <a asp-controller="Laptop" asp-action="Details" asp-route-id="@Model.Id" class="btn btn-warning">Cancel</a>
                 </form>
             </div>

@@ -1,6 +1,6 @@
 ﻿namespace PcStore.Data.Models
 {
-    public class Laptop
+    public class Laptop : IProduct
     {
         public Guid Id { get; set; } = Guid.NewGuid();
 

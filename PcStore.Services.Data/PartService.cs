@@ -2,6 +2,7 @@
 using PcStore.Data;
 using PcStore.Data.Models;
 using PcStore.Services.Data.Interfaces;
+using PcStore.Web.ViewModels.MyCart;
 using PcStore.Web.ViewModels.Part;
 
 namespace PcStore.Services.Data
@@ -24,6 +25,22 @@ namespace PcStore.Services.Data
             };
             await context.Parts.AddAsync(part);
             await context.SaveChangesAsync();
+            return true;
+        }
+
+        public async Task<bool> AddToCart(Guid id)
+        {
+            var part = await context.PartsClients
+                .Where(pc => pc.ClientId == id)
+                .Select(pc => new MyCartViewModel()
+                {
+                    Id = pc.Part.Id.ToString(),
+                    ProductName = pc.Part.Brand,
+                    Price = pc.Part.Price,
+                    ImageUrl = pc.Part.ImageUrl
+                })
+                .ToListAsync();
+
             return true;
         }
 
@@ -117,6 +134,16 @@ namespace PcStore.Services.Data
                .FirstOrDefaultAsync();
 
             return model;
+        }
+
+        public async Task<Part> TakePart(Guid id)
+        {
+            var part = await context.Parts
+               .Where(p => p.Id == id)
+               .Include(p => p.PartsClients)
+               .FirstOrDefaultAsync();
+
+            return part;
         }
     }
 }

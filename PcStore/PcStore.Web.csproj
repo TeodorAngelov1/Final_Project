@@ -28,7 +28,6 @@
 
   <ItemGroup>
     <Folder Include="Views\Accessory\" />
-    <Folder Include="Views\MyCart\" />
     <Folder Include="Views\Part\" />
     <Folder Include="wwwroot\image\" />
   </ItemGroup>

@@ -2,7 +2,7 @@
 
 namespace PcStore.Data.Models
 {
-    public class Part
+    public class Part : IProduct
     {
         public Guid Id { get; set; } = Guid.NewGuid();
         public string Brand { get; set; } = null!;
@@ -14,6 +14,6 @@ namespace PcStore.Data.Models
         public string? ImageUrl { get; set; }
 
         public bool IsDeleted { get; set; }
-        public IEnumerable<PartClient> PartsClients { get; set; } = new List<PartClient>();
+        public List<PartClient> PartsClients { get; set; } = new List<PartClient>();
     }
 }

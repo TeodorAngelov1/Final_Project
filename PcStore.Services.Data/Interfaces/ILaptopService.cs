@@ -1,4 +1,6 @@
-﻿using PcStore.Web.ViewModels.Laptop;
+﻿using PcStore.Data.Models;
+using PcStore.Web.ViewModels.Laptop;
+using PcStore.Web.ViewModels.MyCart;
 namespace PcStore.Services.Data.Interfaces
 {
     public interface ILaptopService
@@ -15,6 +17,7 @@ namespace PcStore.Services.Data.Interfaces
 
         Task<EditLaptopModel> GetById(Guid id);
 
+        Task<Laptop> TakeLaptop(Guid id);
 
     }
 }

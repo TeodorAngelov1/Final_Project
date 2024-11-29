@@ -56,3 +56,7 @@ C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Web.Infrastructu
 C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Web.Infrastructure\bin\Debug\net8.0\PcStore.Data.Models.pdb
 C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Web.Infrastructure\obj\Debug\net8.0\PcStore..E08EDAC0.Up2Date
 C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Web.Infrastructure\obj\Debug\net8.0\ref\PcStore.Web.Infrastructure.dll
+C:\Users\s1231\Desktop\New folder\PcStore.Web.Infrastructure\bin\Debug\net8.0\PcStore.Services.Data.dll
+C:\Users\s1231\Desktop\New folder\PcStore.Web.Infrastructure\bin\Debug\net8.0\PcStore.Web.ViewModels.dll
+C:\Users\s1231\Desktop\New folder\PcStore.Web.Infrastructure\bin\Debug\net8.0\PcStore.Services.Data.pdb
+C:\Users\s1231\Desktop\New folder\PcStore.Web.Infrastructure\bin\Debug\net8.0\PcStore.Web.ViewModels.pdb

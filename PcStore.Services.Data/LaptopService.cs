@@ -5,10 +5,12 @@
     using PcStore.Data.Models;
     using PcStore.Services.Data.Interfaces;
     using PcStore.Web.ViewModels.Laptop;
+    using PcStore.Web.ViewModels.MyCart;
 
     public class LaptopService : BaseService, ILaptopService
     {
         private readonly ApplicationDbContext context;
+
         public LaptopService(ApplicationDbContext _context)
         {
             context = _context;
@@ -124,6 +126,16 @@
         {
            var laptop = await context.Laptops
                .Where(p => p.Id.ToString() == id)
+               .Include(p => p.LaptopsClients)
+               .FirstOrDefaultAsync();
+
+            return laptop;
+        }
+
+        public async Task<Laptop> TakeLaptop(Guid id)
+        {
+            var laptop = await context.Laptops
+               .Where(p => p.Id == id)
                .Include(p => p.LaptopsClients)
                .FirstOrDefaultAsync();
 

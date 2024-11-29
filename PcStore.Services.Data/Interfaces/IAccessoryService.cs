@@ -1,4 +1,5 @@
-﻿using PcStore.Web.ViewModels.Accessory;
+﻿using PcStore.Data.Models;
+using PcStore.Web.ViewModels.Accessory;
 
 namespace PcStore.Services.Data.Interfaces
 {
@@ -15,5 +16,7 @@ namespace PcStore.Services.Data.Interfaces
         Task<AccessoryDetailsModel?> GetAccessoryDetailsByIdAsync(Guid id);
 
         Task<EditAccessoryModel> GetById(Guid id);
+
+        Task<Accessory> TakeAccessory(Guid id);
     }
 }

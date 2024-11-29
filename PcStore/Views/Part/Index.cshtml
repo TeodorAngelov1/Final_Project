@@ -34,7 +34,7 @@
                         @if (User?.Identity?.IsAuthenticated == true)
                         {
                             <a asp-controller="Part" asp-action="Details" asp-route-id="@part.Id" class="btn btn-info me-2 w-50">Details</a>
-                            <form asp-controller="MyCart" asp-action="Buy" method="post" class="w-50">
+                            <form asp-controller="Part" asp-action="AddtoCart" method="post" class="w-50">
                                 <input type="hidden" name="id" value="@part.Id" />
                                 <button type="submit" class="btn btn-success w-100">Buy</button>
                             </form>

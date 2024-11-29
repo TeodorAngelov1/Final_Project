@@ -1,4 +1,5 @@
-﻿using PcStore.Web.ViewModels.Part;
+﻿using PcStore.Data.Models;
+using PcStore.Web.ViewModels.Part;
 namespace PcStore.Services.Data.Interfaces
 {
     public interface IPartService
@@ -14,5 +15,7 @@ namespace PcStore.Services.Data.Interfaces
         Task<PartDetailsModel?> GetPartDetailsByIdAsync(Guid id);
 
         Task<EditPartModel> GetById(Guid id);
+
+        Task<Part> TakePart(Guid id);
     }
 }

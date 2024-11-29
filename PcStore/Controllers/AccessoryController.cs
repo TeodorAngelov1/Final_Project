@@ -1,5 +1,8 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using PcStore.Data.Models;
+using PcStore.Services.Data;
 using PcStore.Services.Data.Interfaces;
 using PcStore.Web.ViewModels.Accessory;
 
@@ -8,11 +11,16 @@ namespace PcStore.Web.Controllers
     public class AccessoryController : BaseController
     {
         private readonly IAccessoryService accessoryService;
+        private readonly UserManager<ApplicationUser> userManager;
+        private readonly IMyCartService myCartService;
 
-        public AccessoryController(IAccessoryService _accessoryService) 
+        public AccessoryController(IAccessoryService _accessoryService, 
+            UserManager<ApplicationUser> _userManager, IMyCartService _myCartService) 
             : base()
         {
             this.accessoryService = _accessoryService;
+            this.userManager = _userManager;
+            this.myCartService = _myCartService;
         }
 
         [HttpGet]
@@ -124,6 +132,33 @@ namespace PcStore.Web.Controllers
             await accessoryService
                .EditAccessoryAsync(accessoryGuid, laptop);
             return RedirectToAction(nameof(Details));
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AddToCart(string? id)
+        {
+            Guid accessoryGuid = Guid.Empty;
+            bool isGuidValid = this.IsGuidValid(id, ref accessoryGuid);
+            if (!isGuidValid)
+            {
+                return this.RedirectToAction(nameof(Index));
+            }
+
+            var accessory = await accessoryService.TakeAccessory(accessoryGuid);
+
+            if (accessory == null)
+            {
+                return BadRequest();
+            }
+
+            string userId = this.userManager.GetUserId(User)!;
+            Guid userGuid = Guid.Empty;
+            if (this.IsGuidValid(userId, ref userGuid))
+            {
+                var product = await myCartService.AddAccessoryAsync(accessory, userGuid);
+            }
+
+            return RedirectToAction(nameof(Index));
         }
     }
 }

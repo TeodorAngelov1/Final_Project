@@ -1,5 +1,8 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using PcStore.Data.Models;
+using PcStore.Services.Data;
 using PcStore.Services.Data.Interfaces;
 using PcStore.Web.ViewModels.Part;
 
@@ -8,11 +11,15 @@ namespace PcStore.Web.Controllers
     public class PartController : BaseController
     {
         private readonly IPartService partService;
-
-        public PartController(IPartService _partService)
+        private readonly IMyCartService myCartService;
+        private readonly UserManager<ApplicationUser> userManager;
+        public PartController(IPartService _partService, 
+            IMyCartService _myCartService, UserManager<ApplicationUser> _userManager)
             : base()
         {
             this.partService = _partService;
+            this.userManager = _userManager;
+            this.myCartService = _myCartService;
         }
 
         [HttpGet]
@@ -123,6 +130,33 @@ namespace PcStore.Web.Controllers
             await partService
                .EditPartAsync(partGuid, part);
             return RedirectToAction(nameof(Details));
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AddToCart(string? id)
+        {
+            Guid partGuid = Guid.Empty;
+            bool isGuidValid = this.IsGuidValid(id, ref partGuid);
+            if (!isGuidValid)
+            {
+                return this.RedirectToAction(nameof(Index));
+            }
+
+            var part = await partService.TakePart(partGuid);
+
+            if (part == null)
+            {
+                return BadRequest();
+            }
+
+            string userId = this.userManager.GetUserId(User)!;
+            Guid userGuid = Guid.Empty;
+            if (this.IsGuidValid(userId, ref userGuid))
+            {
+                var product = await myCartService.AddPartAsync(part, userGuid);
+            }
+
+            return RedirectToAction(nameof(Index));
         }
     }
 }
