@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "2VxZrYXj4GWxzDOGNJWJl6OZXqR5kF7OQWAF86TmQGU=",
+  "Hash": "wb3mORo24sfXEk0P+QTRVej+Bjq0LVRRxhB4HR4cUxc=",
   "Source": "PcStore.Web",
   "BasePath": "_content/PcStore.Web",
   "Mode": "Default",
@@ -1309,6 +1309,25 @@
       "OriginalItemSpec": "wwwroot\\image\\4.png"
     },
     {
+      "Identity": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore\\wwwroot\\image\\404.png",
+      "SourceId": "PcStore.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore\\wwwroot\\",
+      "BasePath": "_content/PcStore.Web",
+      "RelativePath": "image/404.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\image\\404.png"
+    },
+    {
       "Identity": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore\\wwwroot\\image\\5.png",
       "SourceId": "PcStore.Web",
       "SourceType": "Discovered",
@@ -1326,6 +1345,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\image\\5.png"
+    },
+    {
+      "Identity": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore\\wwwroot\\image\\500.png",
+      "SourceId": "PcStore.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore\\wwwroot\\",
+      "BasePath": "_content/PcStore.Web",
+      "RelativePath": "image/500.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\image\\500.png"
     },
     {
       "Identity": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore\\wwwroot\\image\\6.png",
@@ -1383,6 +1421,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\image\\download.png"
+    },
+    {
+      "Identity": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore\\wwwroot\\image\\error.png",
+      "SourceId": "PcStore.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore\\wwwroot\\",
+      "BasePath": "_content/PcStore.Web",
+      "RelativePath": "image/error.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\image\\error.png"
     },
     {
       "Identity": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore\\wwwroot\\js\\site.js",

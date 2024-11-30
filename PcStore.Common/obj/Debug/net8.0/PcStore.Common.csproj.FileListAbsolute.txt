@@ -32,3 +32,4 @@ C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Common\obj\Debug
 C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Common\obj\Debug\net8.0\refint\PcStore.Common.dll
 C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Common\obj\Debug\net8.0\PcStore.Common.pdb
 C:\Users\s1231\source\repos\PcStoreGitHub\Final_Project\PcStore.Common\obj\Debug\net8.0\ref\PcStore.Common.dll
+C:\Users\s1231\Desktop\New folder\PcStore.Common\obj\Debug\net8.0\PcStore.Common.csproj.AssemblyReference.cache

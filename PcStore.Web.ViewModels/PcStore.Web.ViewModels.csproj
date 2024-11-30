@@ -11,6 +11,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\PcStore.Common\PcStore.Common.csproj" />
     <ProjectReference Include="..\PcStore.Data.Models\PcStore.Data.Models.csproj" />
   </ItemGroup>

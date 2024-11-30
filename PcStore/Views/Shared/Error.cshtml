@@ -1,18 +1,26 @@
 ﻿@model ErrorViewModel
+@{
+    ViewData["Title"] = $"Error {@Model.StatusCode}";
+}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Error @Model.StatusCode</title>
-</head>
-<body>
-    <h1>Error @Model.StatusCode</h1>
-    <p>@Model.Message</p>
-    @if (!string.IsNullOrEmpty(Model.Details))
+<style>.hero-banner 
     {
-        <p>@Model.Details</p>
+        background: url('/image/500.png') center/cover no-repeat;
+        height: 90vh;
+        color: white;
     }
-</body>
-</html>
+</style>
+
+
+<div class="hero-banner  d-flex align-items-center justify-content-center text-center text-black">
+    <div class="container">
+        <h1>Error @Model.StatusCode</h1>
+        <p>@Model.Message</p>
+        @if (!string.IsNullOrEmpty(Model.Details))
+        {
+            <p>@Model.Details</p>
+        }
+
+    </div>
+</div>
+

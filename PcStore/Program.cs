@@ -5,7 +5,7 @@ using PcStore.Data.Models;
 using PcStore.Services.Data;
 using PcStore.Services.Data.Interfaces;
 
-namespace PcStore
+namespace PcStore.Web
 {
     public class Program
     {
@@ -45,32 +45,35 @@ namespace PcStore
 
             WebApplication app = builder.Build();
 
-           
+
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
             {
-                app.UseStatusCodePagesWithReExecute("/Error{0}");
-                app.UseExceptionHandler("/Error500");
-                app.UseExceptionHandler("/Error404");
+                app.UseStatusCodePagesWithReExecute("/Error/{0}");
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-            
+            else
+            {
+                app.UseStatusCodePagesWithReExecute("/Error/{0}");
+                app.UseExceptionHandler("/Home/Error");
+            }
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseRouting();
 
-            app.UseAuthentication(); 
-            app.UseAuthorization(); 
+            app.UseAuthentication();
+            app.UseAuthorization();
 
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
-            app.MapRazorPages(); 
+            app.MapRazorPages();
 
-           
+
 
             app.Run();
         }
