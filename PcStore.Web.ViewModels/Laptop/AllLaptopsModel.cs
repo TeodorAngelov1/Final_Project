@@ -1,4 +1,7 @@
-﻿namespace PcStore.Web.ViewModels.Laptop
+﻿using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel.DataAnnotations;
+
+namespace PcStore.Web.ViewModels.Laptop
 {
     public class AllLaptopsModel 
     {
@@ -11,7 +14,5 @@
         public decimal Price { get; set; }
 
         public string? ImageUrl { get; set; }
-
-        
     }
 }

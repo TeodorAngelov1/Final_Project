@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using PcStore.Data.Models;
 using PcStore.Services.Data;
 using PcStore.Services.Data.Interfaces;
+using PcStore.Web.ViewModels.Laptop;
 using PcStore.Web.ViewModels.Part;
 
 namespace PcStore.Web.Controllers
@@ -23,12 +24,17 @@ namespace PcStore.Web.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index([FromQuery] AllQueryPartsModel query)
         {
-            IEnumerable<AllPartModel> allParts =
-                  await partService.GetAllPartsAsync();
+            var queryResult = this.partService.All(
+                 query.SearchTerm,
+                 query.CurrentPage,
+                 AllQueryPartsModel.PartsPerPage);
 
-            return this.View(allParts);
+            query.TotalParts = queryResult.TotalParts;
+            query.Parts = queryResult.Parts;
+
+            return View(query);
         }
 
         [HttpGet]

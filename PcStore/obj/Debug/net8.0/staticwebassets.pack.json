@@ -13,36 +13,8 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore\\wwwroot\\image\\1.jpg",
-      "PackagePath": "staticwebassets\\image\\1.jpg"
-    },
-    {
-      "Id": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore\\wwwroot\\image\\2.png",
-      "PackagePath": "staticwebassets\\image\\2.png"
-    },
-    {
-      "Id": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore\\wwwroot\\image\\3.png",
-      "PackagePath": "staticwebassets\\image\\3.png"
-    },
-    {
-      "Id": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore\\wwwroot\\image\\4.png",
-      "PackagePath": "staticwebassets\\image\\4.png"
-    },
-    {
-      "Id": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore\\wwwroot\\image\\404.png",
-      "PackagePath": "staticwebassets\\image\\404.png"
-    },
-    {
-      "Id": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore\\wwwroot\\image\\5.png",
-      "PackagePath": "staticwebassets\\image\\5.png"
-    },
-    {
       "Id": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore\\wwwroot\\image\\500.png",
       "PackagePath": "staticwebassets\\image\\500.png"
-    },
-    {
-      "Id": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore\\wwwroot\\image\\6.png",
-      "PackagePath": "staticwebassets\\image\\6.png"
     },
     {
       "Id": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore\\wwwroot\\image\\7.png",
@@ -51,10 +23,6 @@
     {
       "Id": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore\\wwwroot\\image\\download.png",
       "PackagePath": "staticwebassets\\image\\download.png"
-    },
-    {
-      "Id": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore\\wwwroot\\image\\error.png",
-      "PackagePath": "staticwebassets\\image\\error.png"
     },
     {
       "Id": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore\\wwwroot\\js\\site.js",

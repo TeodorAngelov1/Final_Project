@@ -7,6 +7,8 @@ namespace PcStore.Web.Views.Laptop
     {
         public void OnGet()
         {
+            
         }
+
     }
 }

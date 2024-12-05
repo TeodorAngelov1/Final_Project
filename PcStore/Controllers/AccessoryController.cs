@@ -4,7 +4,10 @@ using Microsoft.AspNetCore.Mvc;
 using PcStore.Data.Models;
 using PcStore.Services.Data;
 using PcStore.Services.Data.Interfaces;
+using PcStore.Web.ViewModels.Accessories;
 using PcStore.Web.ViewModels.Accessory;
+using PcStore.Web.ViewModels.Laptop;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace PcStore.Web.Controllers
 {
@@ -24,12 +27,17 @@ namespace PcStore.Web.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index([FromQuery] AllQueryAccessoriesModel query)
         {
-            IEnumerable<AllAccessoryModel> accessory =
-                 await accessoryService.GetAllAccessoriesAsync();
+            var queryResult = this.accessoryService.All(
+                query.SearchTerm,
+                query.CurrentPage,
+                AllQueryAccessoriesModel.AccessoriesPerPage);
 
-            return this.View(accessory);
+                query.TotalAccessories = queryResult.TotalAccessories;
+                query.Accessories = queryResult.Accessories;
+
+            return View(query);
         }
 
         [HttpGet]

@@ -5,17 +5,47 @@
     using PcStore.Data.Models;
     using PcStore.Services.Data.Interfaces;
     using PcStore.Web.ViewModels.Laptop;
-    using PcStore.Web.ViewModels.MyCart;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.Linq;
 
     public class LaptopService : BaseService, ILaptopService
     {
         private readonly ApplicationDbContext context;
-
         public LaptopService(ApplicationDbContext _context)
         {
             context = _context;
         }
 
+        public LaptopQueryModel All(
+            string searchTerm,
+            int currentPage = 1,
+            int laptopsPerPage = 3
+            )
+        {
+            var laptopsQuery = this.context.Laptops
+                .Where(x => x.IsDeleted == false);
+
+            if (!string.IsNullOrWhiteSpace(searchTerm))
+            {
+                laptopsQuery = laptopsQuery.Where(c =>
+                    c.Brand.ToLower().Contains(searchTerm.ToLower()));
+            }
+
+            var totalLaptops = laptopsQuery.Count();
+
+            var laptops = GetLaptops(laptopsQuery
+                .Skip((currentPage - 1) * laptopsPerPage)
+                .Take(laptopsPerPage));
+
+            return new LaptopQueryModel
+            {
+                TotalLaptops = totalLaptops,
+                CurrentPage = currentPage,
+                LaptopsPerPage = laptopsPerPage,
+                Laptops = laptops
+            };
+        }
         public async Task<bool> AddLaptopAsync(AddLaptopModel inputModel)
         {
            Laptop laptop = new Laptop()
@@ -55,7 +85,7 @@
             return true;
         }
 
-        public async Task<EditLaptopModel> EditLaptopAsync(Guid id, EditLaptopModel model)
+        public async Task EditLaptopAsync(Guid id, EditLaptopModel model)
         {
              var entity = await context.Laptops
                 .Where(g => g.Id == id)
@@ -69,25 +99,6 @@
 
                 await context.SaveChangesAsync();
             
-            
-            return model;
-        }
-
-        public async Task<IEnumerable<AllLaptopsModel>> GetAllLaptopsAsync()
-        {
-            var model = await context.Laptops
-                .Where(p => p.IsDeleted == false)
-                .Select(p => new AllLaptopsModel()
-                {
-                    Id = p.Id.ToString(),
-                    Brand = p.Brand,
-                    ImageUrl = p.ImageUrl,
-                    Price = p.Price,
-                    Description = p.Description
-                })
-                .ToListAsync();
-
-            return model;
         }
 
         public async Task<EditLaptopModel> GetById(Guid id)
@@ -103,6 +114,7 @@
             };
             return entity;
         }
+
 
         public async Task<LaptopDetailsModel?> GetLaptopDetailsByIdAsync(Guid id)
         {
@@ -122,15 +134,6 @@
             return model;
         }
 
-       public async Task<Laptop> GetLaptopAsync(string id)
-        {
-           var laptop = await context.Laptops
-               .Where(p => p.Id.ToString() == id)
-               .Include(p => p.LaptopsClients)
-               .FirstOrDefaultAsync();
-
-            return laptop;
-        }
 
         public async Task<Laptop> TakeLaptop(Guid id)
         {
@@ -141,5 +144,22 @@
 
             return laptop;
         }
+        private IEnumerable<AllLaptopsModel> GetLaptops(IQueryable<Laptop> laptopQuery)
+        {
+            var laptops = laptopQuery
+                .Select(l => new AllLaptopsModel()
+                {
+                    Id = l.Id.ToString(),
+                    Brand = l.Brand,
+                    Price = l.Price,
+                    Description = l.Description,
+                    ImageUrl = l.ImageUrl ?? string.Empty
+                })
+            .ToList();
+            return laptops;
+        }
+
+
+       
     }
 }

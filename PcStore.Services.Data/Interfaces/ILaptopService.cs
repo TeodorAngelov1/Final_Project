@@ -1,17 +1,14 @@
 ﻿using PcStore.Data.Models;
 using PcStore.Web.ViewModels.Laptop;
-using PcStore.Web.ViewModels.MyCart;
 namespace PcStore.Services.Data.Interfaces
 {
     public interface ILaptopService
     {
-        Task<IEnumerable<AllLaptopsModel>> GetAllLaptopsAsync();
-
         Task<bool> DeleteLaptopAsync(Guid id);
 
         Task<bool> AddLaptopAsync(AddLaptopModel inputModel);
 
-        Task<EditLaptopModel> EditLaptopAsync(Guid id, EditLaptopModel model);
+        Task EditLaptopAsync(Guid id, EditLaptopModel model);
 
         Task<LaptopDetailsModel?> GetLaptopDetailsByIdAsync(Guid id);
 
@@ -19,5 +16,9 @@ namespace PcStore.Services.Data.Interfaces
 
         Task<Laptop> TakeLaptop(Guid id);
 
+        LaptopQueryModel All(
+            string searchTerm = null,
+            int currentPage = 1,
+            int laptopsPerPage = int.MaxValue);
     }
 }

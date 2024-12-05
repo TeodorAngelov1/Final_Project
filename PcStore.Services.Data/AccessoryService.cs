@@ -2,6 +2,7 @@
 using PcStore.Data;
 using PcStore.Data.Models;
 using PcStore.Services.Data.Interfaces;
+using PcStore.Web.ViewModels.Accessories;
 using PcStore.Web.ViewModels.Accessory;
 using PcStore.Web.ViewModels.MyCart;
 
@@ -15,6 +16,37 @@ namespace PcStore.Services.Data
         {
             context = _context;
         }
+
+        public AccessoryQueryModel All(
+            string searchTerm,
+            int currentPage = 1,
+            int accessoriesPerPage = 3
+            )
+        {
+            var accessoriesQuery = this.context.Accessories
+                .Where(x => x.IsDeleted == false);
+
+            if (!string.IsNullOrWhiteSpace(searchTerm))
+            {
+                accessoriesQuery = accessoriesQuery.Where(c =>
+                    c.Brand.ToLower().Contains(searchTerm.ToLower()));
+            }
+
+            var totalAccessories = accessoriesQuery.Count();
+
+            var accessories = GetAccessories(accessoriesQuery
+                .Skip((currentPage - 1) * accessoriesPerPage)
+                .Take(accessoriesPerPage));
+
+            return new AccessoryQueryModel
+            {
+                TotalAccessories = totalAccessories,
+                CurrentPage = currentPage,
+                AccessoriesPerPage = accessoriesPerPage,
+                Accessories = accessories
+            };
+        }
+
         public async Task<bool> AddAccessoryAsync(AddAccessoryModel inputModel)
         {
             Accessory accessory = new Accessory()
@@ -70,7 +102,7 @@ namespace PcStore.Services.Data
             return true;
         }
 
-        public async Task<EditAccessoryModel> EditAccessoryAsync(Guid id, EditAccessoryModel model)
+        public async Task EditAccessoryAsync(Guid id, EditAccessoryModel model)
         {
             var entity = await context.Accessories
                 .Where(g => g.Id == id)
@@ -84,8 +116,6 @@ namespace PcStore.Services.Data
 
             await context.SaveChangesAsync();
 
-
-            return model;
         }
 
         public async Task<AccessoryDetailsModel?> GetAccessoryDetailsByIdAsync(Guid id)
@@ -106,22 +136,7 @@ namespace PcStore.Services.Data
             return model;
         }
 
-        public async Task<IEnumerable<AllAccessoryModel>> GetAllAccessoriesAsync()
-        {
-            var model = await context.Accessories
-                .Where(p => p.IsDeleted == false)
-                .Select(p => new AllAccessoryModel()
-                {
-                    Id = p.Id.ToString(),
-                    Brand = p.Brand,
-                    ImageUrl = p.ImageUrl,
-                    Price = p.Price,
-                    Description = p.Description
-                })
-                .ToListAsync();
-
-            return model;
-        }
+       
 
         public async Task<EditAccessoryModel> GetById(Guid id)
         {
@@ -145,6 +160,21 @@ namespace PcStore.Services.Data
                .FirstOrDefaultAsync();
 
             return accessory;
+        }
+
+        private IEnumerable<AllAccessoryModel> GetAccessories(IQueryable<Accessory> accessoryQuery)
+        {
+            var accessories = accessoryQuery
+                .Select(l => new AllAccessoryModel()
+                {
+                    Id = l.Id.ToString(),
+                    Brand = l.Brand,
+                    Price = l.Price,
+                    Description = l.Description,
+                    ImageUrl = l.ImageUrl ?? string.Empty
+                })
+            .ToList();
+            return accessories;
         }
     }
 }

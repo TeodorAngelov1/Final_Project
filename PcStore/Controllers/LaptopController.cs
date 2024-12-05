@@ -23,13 +23,19 @@ namespace PcStore.Web.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Index()
+        public IActionResult Index([FromQuery] AllQueryLaptopsModel query)
         {
-            IEnumerable<AllLaptopsModel> allLaptops =
-                 await laptopService.GetAllLaptopsAsync();
+            var queryResult = this.laptopService.All(
+                query.SearchTerm,
+                query.CurrentPage,
+                AllQueryLaptopsModel.LaptopsPerPage);
 
-             return this.View(allLaptops);
+            query.TotalLaptops = queryResult.TotalLaptops;
+            query.Laptops = queryResult.Laptops;
+
+            return View(query);
         }
+
 
         [HttpGet]
         public async Task<IActionResult> Details(string? id)

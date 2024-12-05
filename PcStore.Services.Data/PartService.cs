@@ -2,6 +2,7 @@
 using PcStore.Data;
 using PcStore.Data.Models;
 using PcStore.Services.Data.Interfaces;
+using PcStore.Web.ViewModels.Laptop;
 using PcStore.Web.ViewModels.MyCart;
 using PcStore.Web.ViewModels.Part;
 
@@ -14,6 +15,37 @@ namespace PcStore.Services.Data
         {
             context = _context;
         }
+
+        public PartQueryModel All(
+            string searchTerm,
+            int currentPage = 1,
+            int partsPerPage = 3
+            )
+        {
+            var partsQuery = this.context.Parts
+                .Where(x => x.IsDeleted == false);
+
+            if (!string.IsNullOrWhiteSpace(searchTerm))
+            {
+                partsQuery = partsQuery.Where(c =>
+                    c.Brand.ToLower().Contains(searchTerm.ToLower()));
+            }
+
+            var totalParts = partsQuery.Count();
+
+            var parts = GetParts(partsQuery
+                .Skip((currentPage - 1) * partsPerPage)
+                .Take(partsPerPage));
+
+            return new PartQueryModel
+            {
+                TotalParts = totalParts,
+                CurrentPage = currentPage,
+                PartsPerPage = partsPerPage,
+                Parts = parts
+            };
+        }
+
         public async Task<bool> AddPartAsync(AddPartModel inputModel)
         {
             Part part = new Part()
@@ -69,7 +101,7 @@ namespace PcStore.Services.Data
             return true;
         }
 
-        public async Task<EditPartModel> EditPartAsync(Guid id, EditPartModel model)
+        public async Task EditPartAsync(Guid id, EditPartModel model)
         {
             var entity = await context.Parts
                 .Where(g => g.Id == id)
@@ -82,26 +114,6 @@ namespace PcStore.Services.Data
             entity.ImageUrl = model.ImageUrl;
 
             await context.SaveChangesAsync();
-
-
-            return model;
-        }
-
-        public async Task<IEnumerable<AllPartModel>> GetAllPartsAsync()
-        {
-            var model = await context.Parts
-                .Where(p => p.IsDeleted == false)
-                .Select(p => new AllPartModel()
-                {
-                    Id = p.Id.ToString(),
-                    Brand = p.Brand,
-                    ImageUrl = p.ImageUrl,
-                    Price = p.Price,
-                    Description = p.Description
-                })
-                .ToListAsync();
-
-            return model;
         }
 
         public async Task<EditPartModel> GetById(Guid id)
@@ -144,6 +156,21 @@ namespace PcStore.Services.Data
                .FirstOrDefaultAsync();
 
             return part;
+        }
+
+        private IEnumerable<AllPartModel> GetParts(IQueryable<Part> partQuery)
+        {
+            var parts = partQuery
+                .Select(l => new AllPartModel()
+                {
+                    Id = l.Id.ToString(),
+                    Brand = l.Brand,
+                    Price = l.Price,
+                    Description = l.Description,
+                    ImageUrl = l.ImageUrl ?? string.Empty
+                })
+            .ToList();
+            return parts;
         }
     }
 }

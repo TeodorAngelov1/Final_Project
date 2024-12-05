@@ -8,7 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Diagnostics" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.10" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.10" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.10" />
@@ -21,6 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\PcStore.Data.Models\PcStore.Data.Models.csproj" />
     <ProjectReference Include="..\PcStore.Data\PcStore.Data.csproj" />
     <ProjectReference Include="..\PcStore.Services.Data\PcStore.Services.Data.csproj" />
     <ProjectReference Include="..\PcStore.Web.Infrastructure\PcStore.Web.Infrastructure.csproj" />
@@ -28,8 +28,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Accessory\" />
-    <Folder Include="Views\Part\" />
     <Folder Include="wwwroot\image\" />
   </ItemGroup>
 

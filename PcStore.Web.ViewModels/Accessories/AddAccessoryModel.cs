@@ -1,4 +1,4 @@
-﻿namespace PcStore.Web.ViewModels.Accessory
+﻿namespace PcStore.Web.ViewModels.Accessories
 {
     using static Common.EntityValidationConstants.Accessory;
     using System.ComponentModel.DataAnnotations;

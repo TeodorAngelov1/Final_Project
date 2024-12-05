@@ -2,7 +2,7 @@
 
 namespace PcStore.Data.Models
 {
-    public class Part : IProduct
+    public class Part 
     {
         public Guid Id { get; set; } = Guid.NewGuid();
         public string Brand { get; set; } = null!;
