@@ -4,6 +4,7 @@ using PcStore.Services.Data.Interfaces;
 using PcStore.Web.ViewModels.Laptop;
 using PcStore.Data.Models;
 using Microsoft.AspNetCore.Identity;
+using static PcStore.Common.TempConstants.Laptop;
 
 namespace PcStore.Web.Controllers
 {
@@ -164,7 +165,7 @@ namespace PcStore.Web.Controllers
             {
                 var product = await myCartService.AddLaptopAsync(laptop, userGuid);
             }
-                
+            this.TempData[LaptopMessage] = "Laptop was added to your cart!";
             return RedirectToAction(nameof(Index));
         }
     }

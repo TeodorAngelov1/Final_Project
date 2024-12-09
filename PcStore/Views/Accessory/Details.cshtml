@@ -1,4 +1,5 @@
 ﻿@using PcStore.Web.ViewModels.Accessories;
+@using static PcStore.Common.AdminConstant;
 @model AccessoryDetailsModel;
 @{
     ViewData["Title"] = "Accessory Details";
@@ -17,9 +18,16 @@
 
             <h4>Price</h4>
             <p class="text-success fs-4">$@Model.Price</p>
-            <a asp-controller="Accessory" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning btn-sm">Edit</a>
-            <a asp-controller="Accessory" asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger btn-sm">Delete</a>
-            <a asp-controller="Accessory" asp-action="Index" class="btn btn-secondary btn-lg mt-3">Back to Accessories</a>
+            @if (User?.IsInRole(AdminRoleName) == true)
+            {
+                <a asp-controller="Accessory" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning btn-sm">Edit</a>
+                <a asp-controller="Accessory" asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger btn-sm">Delete</a>
+                <a asp-controller="Accessory" asp-action="Index" class="btn btn-secondary btn-lg mt-3">Back to Accessories</a>
+            }
+            else
+            {
+                <a asp-controller="Accessory" asp-action="Index" class="btn btn-secondary btn-lg mt-3">Back to Accessories</a>
+            }
         </div>
     </div>
 </div>

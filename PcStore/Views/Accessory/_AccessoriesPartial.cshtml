@@ -1,4 +1,6 @@
 ﻿@using PcStore.Web.ViewModels.Accessory;
+@using static PcStore.Common.AdminConstant;
+@using static PcStore.Common.TempConstants.Accessories;
 @model IEnumerable<AllAccessoryModel>
 @{
     ViewData["Title"] = "Accessories List";
@@ -6,13 +8,18 @@
 
 <div class="d-flex justify-content-between align-items-center mb-3" style="margin-top: 20px;">
     <h2>@ViewData["Title"]</h2>
-    @if (User?.Identity?.IsAuthenticated == true)
+    @if (User?.IsInRole(AdminRoleName) == true)
     {
         <a asp-controller="Accessory" asp-action="Add" class="btn btn-primary"><i class="fas fa-plus"></i>Add Accessory</a>
     }
 </div>
 <hr />
-
+@if (TempData.ContainsKey(AccessoriesMessage))
+{
+    <div class="alert alert-success" role="alert">
+        @TempData[AccessoriesMessage]
+    </div>
+}
 <div class="row text-center">
     @foreach (var accessory in Model)
     {
@@ -31,13 +38,17 @@
                     <h5 class="card-title">@accessory.Brand</h5>
                     <p class="card-text">Price: @accessory.Price.ToString("C", System.Globalization.CultureInfo.CreateSpecificCulture("fr-FR"))</p>
                     <div class="d-flex justify-content-between mt-auto">
-                        @if (User?.Identity?.IsAuthenticated == true)
+                        @if (User?.Identity?.IsAuthenticated == true && User?.IsInRole(AdminRoleName) == false)
                         {
                             <a asp-controller="Accessory" asp-action="Details" asp-route-id="@accessory.Id" class="btn btn-info me-2 w-50">Details</a>
                             <form asp-controller="Accessory" asp-action="AddtoCart" method="post" class="w-50">
                                 <input type="hidden" name="id" value="@accessory.Id" />
                                 <button type="submit" class="btn btn-success w-100">Buy</button>
                             </form>
+                        }
+                        else if(User?.IsInRole(AdminRoleName) == true)
+                        {
+                            <a asp-controller="Accessory" asp-action="Details" asp-route-id="@accessory.Id" class="btn btn-info me-2 w-50">Details</a>
                         }
                         else
                         {

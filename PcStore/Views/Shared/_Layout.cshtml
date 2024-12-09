@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using static PcStore.Common.AdminConstant; 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -20,23 +21,15 @@
                 <div class="collapse navbar-collapse" id="navbarColor02">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            @if (User?.Identity?.IsAuthenticated ?? false)
+                           @if (User?.Identity?.IsAuthenticated ?? false)
                             {
                                 <a class="nav-link active" asp-controller="Home" asp-action="Index">
                                     Home
                                     <span class="visually-hidden">(current)</span>
-                                </a>
-                                 
-                            }
-                            else
-                            {
-                                <a class="nav-link active" asp-controller="Home" asp-action="Index">
-                                    Home
-                                    <span class="visually-hidden">(current)</span>
-                                </a>
+                                </a> 
                             }
                         </li>
-                        @if (User?.Identity?.IsAuthenticated ?? false)
+                        @if (User?.Identity?.IsAuthenticated == true && User?.IsInRole(AdminRoleName) == false)
                         {
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Products</a>
@@ -50,6 +43,22 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" asp-controller="MyCart" asp-action="Index">MyCart</a>
+                            </li>
+                        }
+                        else if(User?.IsInRole(AdminRoleName) == true)
+                        {
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Products</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" asp-controller="Laptop" asp-action="Index">Laptops</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" asp-controller="Part" asp-action="Index">Parts</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" asp-controller="Accessory" asp-action="Index">Accessories</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="MyCart" asp-action="Index">Administrate</a>
                             </li>
                         }
                         else

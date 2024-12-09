@@ -16,6 +16,7 @@
           "Microsoft.EntityFrameworkCore.Tools": "8.0.10",
           "Microsoft.Extensions.DependencyInjection": "9.0.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "8.0.6",
+          "PcStore.Common": "1.0.0",
           "PcStore.Data": "1.0.0",
           "PcStore.Data.Models": "1.0.0",
           "PcStore.Services.Data": "1.0.0",
@@ -2417,6 +2418,7 @@
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "9.0.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "8.0.6",
+          "PcStore.Common": "1.0.0",
           "PcStore.Data": "1.0.0",
           "PcStore.Services.Data": "1.0.0"
         },

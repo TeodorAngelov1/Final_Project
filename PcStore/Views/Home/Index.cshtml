@@ -8,11 +8,27 @@
     height: 70vh;
     color: white;
     border-radius: 40px 40px 40px 40px;
+    position: relative;
+ 
 }
+
+        .hero-banner::before {
+            position: absolute;
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background:#0000005f;
+            border-radius: 40px 40px 40px 40px;
+        }
+
+        .container { z-index: 1;}
 </style>
   
 
-<div class="hero-banner d-flex align-items-center justify-content-center text-center text-black">
+<div class="hero-banner d-flex align-items-center justify-content-center text-center text-white">
     <div class="container">
         <h1 class="display-4 fw-bold">Welcome to PC World</h1>
         <p class="lead">Find the best deals!</p>

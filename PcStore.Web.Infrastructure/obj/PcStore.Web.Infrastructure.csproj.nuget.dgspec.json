@@ -346,6 +346,9 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+              "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Common\\PcStore.Common.csproj": {
+                "projectPath": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Common\\PcStore.Common.csproj"
+              },
               "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Data\\PcStore.Data.csproj": {
                 "projectPath": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Data\\PcStore.Data.csproj"
               },

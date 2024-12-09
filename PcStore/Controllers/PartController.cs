@@ -2,10 +2,9 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using PcStore.Data.Models;
-using PcStore.Services.Data;
 using PcStore.Services.Data.Interfaces;
-using PcStore.Web.ViewModels.Laptop;
 using PcStore.Web.ViewModels.Part;
+using static PcStore.Common.TempConstants.Part;
 
 namespace PcStore.Web.Controllers
 {
@@ -161,7 +160,7 @@ namespace PcStore.Web.Controllers
             {
                 var product = await myCartService.AddPartAsync(part, userGuid);
             }
-
+            this.TempData[PartMessage] = "Part was added to your cart!";
             return RedirectToAction(nameof(Index));
         }
     }

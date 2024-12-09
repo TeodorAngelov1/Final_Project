@@ -2,12 +2,11 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using PcStore.Data.Models;
-using PcStore.Services.Data;
 using PcStore.Services.Data.Interfaces;
 using PcStore.Web.ViewModels.Accessories;
 using PcStore.Web.ViewModels.Accessory;
-using PcStore.Web.ViewModels.Laptop;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
+using static PcStore.Common.TempConstants.Accessories;
+
 
 namespace PcStore.Web.Controllers
 {
@@ -165,7 +164,7 @@ namespace PcStore.Web.Controllers
             {
                 var product = await myCartService.AddAccessoryAsync(accessory, userGuid);
             }
-
+            this.TempData[AccessoriesMessage] = "Accessory was added to your cart!";
             return RedirectToAction(nameof(Index));
         }
     }

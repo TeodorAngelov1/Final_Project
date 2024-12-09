@@ -1,10 +1,12 @@
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PcStore.Data;
 using PcStore.Data.Models;
 using PcStore.Services.Data;
 using PcStore.Services.Data.Interfaces;
-
+using static PcStore.Common.AdminConstant;
+using PcStore.Web.Infrastructure.Extensions;
 namespace PcStore.Web
 {
     public class Program
@@ -27,8 +29,12 @@ namespace PcStore.Web
                     ConfigureIdentity(builder, cfg);
                 })
                 .AddEntityFrameworkStores<ApplicationDbContext>()
+                 .AddRoles<IdentityRole<Guid>>()
+                 .AddSignInManager<SignInManager<ApplicationUser>>()
+                .AddUserManager<UserManager<ApplicationUser>>()
                 .AddDefaultUI()
                 .AddDefaultTokenProviders();
+           
 
             builder.Services.ConfigureApplicationCookie(cfg =>
             {
@@ -40,12 +46,13 @@ namespace PcStore.Web
             builder.Services.AddScoped<IAccessoryService, AccessoryService>();
             builder.Services.AddScoped<IMyCartService, MyCartService>();
 
-            builder.Services.AddControllersWithViews();
+            builder.Services.AddControllersWithViews(options =>
+            {
+                options.Filters.Add<AutoValidateAntiforgeryTokenAttribute>();
+            });
             builder.Services.AddRazorPages();
 
             WebApplication app = builder.Build();
-
-
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
@@ -64,17 +71,16 @@ namespace PcStore.Web
             app.UseStaticFiles();
 
             app.UseRouting();
-
             app.UseAuthentication();
             app.UseAuthorization();
+
+            app.SeedAdministrator(AdminEmail, AdminUsername, AdminPass);
 
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
             app.MapRazorPages();
-
-
-
+            app.ApplyMigrations();
             app.Run();
         }
 
@@ -97,8 +103,6 @@ namespace PcStore.Web
                 builder.Configuration.GetValue<bool>("Identity:SignIn:RequireConfirmedAccount");
             cfg.SignIn.RequireConfirmedEmail =
                 builder.Configuration.GetValue<bool>("Identity:SignIn:RequireConfirmedEmail");
-            cfg.SignIn.RequireConfirmedPhoneNumber =
-                builder.Configuration.GetValue<bool>("Identity:SignIn:RequireConfirmedPhoneNumber");
 
             cfg.User.RequireUniqueEmail =
                 builder.Configuration.GetValue<bool>("Identity:User:RequireUniqueEmail");
