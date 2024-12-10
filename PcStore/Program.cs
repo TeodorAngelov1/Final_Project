@@ -45,6 +45,7 @@ namespace PcStore.Web
             builder.Services.AddScoped<IPartService, PartService>();
             builder.Services.AddScoped<IAccessoryService, AccessoryService>();
             builder.Services.AddScoped<IMyCartService, MyCartService>();
+            builder.Services.AddScoped<IAdminService, AdminService>();
 
             builder.Services.AddControllersWithViews(options =>
             {
