@@ -1,0 +1,505 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Test\\PcStore.Test.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Common\\PcStore.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Common\\PcStore.Common.csproj",
+        "projectName": "PcStore.Common",
+        "projectPath": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Common\\PcStore.Common.csproj",
+        "packagesPath": "C:\\Users\\s1231\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\s1231\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Data.Models\\PcStore.Data.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Data.Models\\PcStore.Data.Models.csproj",
+        "projectName": "PcStore.Data.Models",
+        "projectPath": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Data.Models\\PcStore.Data.Models.csproj",
+        "packagesPath": "C:\\Users\\s1231\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Data.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\s1231\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Data\\PcStore.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Data\\PcStore.Data.csproj",
+        "projectName": "PcStore.Data",
+        "projectPath": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Data\\PcStore.Data.csproj",
+        "packagesPath": "C:\\Users\\s1231\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\s1231\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Common\\PcStore.Common.csproj": {
+                "projectPath": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Common\\PcStore.Common.csproj"
+              },
+              "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Data.Models\\PcStore.Data.Models.csproj": {
+                "projectPath": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Data.Models\\PcStore.Data.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Services.Data\\PcStore.Services.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Services.Data\\PcStore.Services.Data.csproj",
+        "projectName": "PcStore.Services.Data",
+        "projectPath": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Services.Data\\PcStore.Services.Data.csproj",
+        "packagesPath": "C:\\Users\\s1231\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Services.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\s1231\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Common\\PcStore.Common.csproj": {
+                "projectPath": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Common\\PcStore.Common.csproj"
+              },
+              "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Data\\PcStore.Data.csproj": {
+                "projectPath": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Data\\PcStore.Data.csproj"
+              },
+              "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Web.ViewModels\\PcStore.Web.ViewModels.csproj": {
+                "projectPath": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Web.ViewModels\\PcStore.Web.ViewModels.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNet.Mvc": {
+              "target": "Package",
+              "version": "[5.3.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Test\\PcStore.Test.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Test\\PcStore.Test.csproj",
+        "projectName": "PcStore.Test",
+        "projectPath": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Test\\PcStore.Test.csproj",
+        "packagesPath": "C:\\Users\\s1231\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Test\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\s1231\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Data.Models\\PcStore.Data.Models.csproj": {
+                "projectPath": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Data.Models\\PcStore.Data.Models.csproj"
+              },
+              "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Data\\PcStore.Data.csproj": {
+                "projectPath": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Data\\PcStore.Data.csproj"
+              },
+              "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Services.Data\\PcStore.Services.Data.csproj": {
+                "projectPath": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Services.Data\\PcStore.Services.Data.csproj"
+              },
+              "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Web.ViewModels\\PcStore.Web.ViewModels.csproj": {
+                "projectPath": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Web.ViewModels\\PcStore.Web.ViewModels.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.8.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.20.72, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.14.0, )"
+            },
+            "NUnit.Analyzers": {
+              "target": "Package",
+              "version": "[3.9.0, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Web.ViewModels\\PcStore.Web.ViewModels.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Web.ViewModels\\PcStore.Web.ViewModels.csproj",
+        "projectName": "PcStore.Web.ViewModels",
+        "projectPath": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Web.ViewModels\\PcStore.Web.ViewModels.csproj",
+        "packagesPath": "C:\\Users\\s1231\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Web.ViewModels\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\s1231\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Common\\PcStore.Common.csproj": {
+                "projectPath": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Common\\PcStore.Common.csproj"
+              },
+              "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Data.Models\\PcStore.Data.Models.csproj": {
+                "projectPath": "C:\\Users\\s1231\\Desktop\\New folder\\PcStore.Data.Models\\PcStore.Data.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

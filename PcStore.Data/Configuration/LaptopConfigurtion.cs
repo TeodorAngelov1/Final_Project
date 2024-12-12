@@ -4,7 +4,7 @@ namespace PcStore.Data.Configuration
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Metadata.Builders;
     using PcStore.Data.Models;
-    using static Common.EntityValidationConstants.Laptop;
+    using static Common.EntityValidationConstants;
     public class LaptopConfigurtion : IEntityTypeConfiguration<Laptop>
     {
         public void Configure(EntityTypeBuilder<Laptop> builder)

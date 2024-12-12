@@ -2,7 +2,7 @@
 {
     using Data.Models;
     using System.ComponentModel.DataAnnotations;
-    using static Common.EntityValidationConstants.Part;
+    using static Common.EntityValidationConstants;
     public class AddPartToMyCartModel 
     {
         [Required]

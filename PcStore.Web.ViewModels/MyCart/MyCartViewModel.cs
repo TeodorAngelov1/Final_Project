@@ -1,5 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using static PcStore.Common.EntityValidationConstants.MyCart;
+using static PcStore.Common.EntityValidationConstants;
 namespace PcStore.Web.ViewModels.MyCart
 {
     public class MyCartViewModel

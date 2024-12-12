@@ -186,7 +186,7 @@ namespace PcStore.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("f5e7496e-32c8-4302-ae34-1e775162ba32"),
+                            Id = new Guid("d9d7d4b9-542e-42e8-857a-62955eb61291"),
                             Brand = "Sony Headphones",
                             Description = "The Best",
                             IsDeleted = false,
@@ -194,7 +194,7 @@ namespace PcStore.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("1b514b75-158f-4902-9468-e88f573cc3db"),
+                            Id = new Guid("96ad1aba-f3f8-4489-b996-656fd622e028"),
                             Brand = "JBL T100",
                             Description = "Buy now",
                             IsDeleted = false,
@@ -202,7 +202,7 @@ namespace PcStore.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("7da757de-928d-4689-b43c-832b0c956fab"),
+                            Id = new Guid("4a898425-b25a-485c-899d-417ecef39a62"),
                             Brand = "BOSE Wireless Headphones",
                             Description = "Nice sound",
                             IsDeleted = false,
@@ -324,7 +324,7 @@ namespace PcStore.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("81280714-c39e-461b-9597-1d60f5922f0d"),
+                            Id = new Guid("295bd679-1ad7-4c27-92c3-3429ce10dcc8"),
                             Brand = "HP",
                             Description = "Nice Laptop",
                             IsDeleted = false,
@@ -332,7 +332,7 @@ namespace PcStore.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("cf3ba0af-8661-4ea6-8d91-5967c605a82e"),
+                            Id = new Guid("f014d01d-5ed5-4b55-b4fc-33a4125b0813"),
                             Brand = "Dell",
                             Description = "Buy now",
                             IsDeleted = false,
@@ -340,7 +340,7 @@ namespace PcStore.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2da545e5-6bca-4fac-88bd-615202a542c8"),
+                            Id = new Guid("0de55b13-0b37-4c1d-8fa2-d42a3ca94dc9"),
                             Brand = "Lenovo",
                             Description = "Best Laptop",
                             IsDeleted = false,
@@ -396,7 +396,7 @@ namespace PcStore.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("c3b0cf01-c967-47d2-b7d7-6fc91b97085d"),
+                            Id = new Guid("31583a72-1afe-465e-b2a7-8ab166d8e591"),
                             Brand = "Samsung",
                             Description = "RAM Memory",
                             IsDeleted = false,
@@ -404,7 +404,7 @@ namespace PcStore.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("33dfb343-7fd7-4042-abe0-8650797052a4"),
+                            Id = new Guid("52bdebad-f4d7-4759-95a1-ee40a0be4a0c"),
                             Brand = "Kingston",
                             Description = "SSD",
                             IsDeleted = false,
@@ -412,7 +412,7 @@ namespace PcStore.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2f0c3ccc-e719-4d24-b8cb-4e1c6cb529f0"),
+                            Id = new Guid("16c52554-bcda-4ef7-941a-c666c783bb0d"),
                             Brand = "Seagete",
                             Description = "HDD",
                             IsDeleted = false,

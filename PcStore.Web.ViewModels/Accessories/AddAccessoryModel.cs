@@ -1,6 +1,6 @@
 ﻿namespace PcStore.Web.ViewModels.Accessories
 {
-    using static Common.EntityValidationConstants.Accessory;
+    using static Common.EntityValidationConstants;
     using System.ComponentModel.DataAnnotations;
 
     public class AddAccessoryModel 

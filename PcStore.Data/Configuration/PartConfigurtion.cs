@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using PcStore.Data.Models;
-using static PcStore.Common.EntityValidationConstants.Part;
+using static PcStore.Common.EntityValidationConstants;
 
 namespace PcStore.Data.Configuration
 {

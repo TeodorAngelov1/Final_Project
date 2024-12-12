@@ -1,6 +1,6 @@
 ﻿namespace PcStore.Web.ViewModels.Part
 {
-    using static Common.EntityValidationConstants.Part;
+    using static Common.EntityValidationConstants;
     using System.ComponentModel.DataAnnotations;
 
     public class AddPartModel 

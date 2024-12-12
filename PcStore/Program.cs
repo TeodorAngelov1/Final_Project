@@ -81,7 +81,7 @@ namespace PcStore.Web
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
             app.MapRazorPages();
-            app.ApplyMigrations();
+            //app.ApplyMigrations();
             app.Run();
         }
 
